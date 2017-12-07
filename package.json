@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
-    "heroku-postbuild": "heroku-nextjs-build"
+    "start": "next start"
   },
   "keywords": [
     "awesomeTomatoes"
