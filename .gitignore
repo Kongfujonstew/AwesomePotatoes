@@ -1,0 +1,6 @@
+node_modules
+__tests__
+.env.local
+next.config.js
+yarn-error.log
+yarn.lock

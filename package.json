@@ -1,0 +1,45 @@
+{
+  "name": "awesomeTomatoes",
+  "version": "1.0.0",
+  "description": "simple react-apollo movie DB",
+  "main": "server/server.js",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "keywords": [
+    "awesomeTomatoes"
+  ],
+  "author": "JMS",
+  "license": "ISC",
+  "dependencies": {
+    "apollo-client": "^1.9.3",
+    "auth0-js": "^8.12.0",
+    "auth0-lock": "^10.24.1",
+    "axios": "^0.16.2",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "express": "^4.16.1",
+    "graphql": "^0.11.7",
+    "graphql-tag": "^2.5.0",
+    "graphql-tools": "^2.2.1",
+    "mongoose": "^4.12.1",
+    "morgan": "^1.9.0",
+    "next": "^4.1.0",
+    "next-redux-wrapper": "^1.3.5",
+    "nodemon": "^1.12.1",
+    "path": "^0.12.7",
+    "react": "^16.0.0",
+    "react-apollo": "^2.0.1",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
+    "redux-thunk": "^2.2.0"
+  }
+}
