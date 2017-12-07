@@ -3,9 +3,6 @@ import Auth0Lock from 'auth0-lock';
 
 const clientID = 'w5SleZPUmI1zvzUm3i5yb7aStN0Dz6wq';
 const domain = 'awesometomatoes.auth0.com';
-// const redirectUri = 'http://localhost:3000/home';
-// const audience = 'https://awesometomatoes.auth0.com/userinfo';
-// const options = { auth: { redirectUri }};
 
 export default class Auth {
   constructor() {
