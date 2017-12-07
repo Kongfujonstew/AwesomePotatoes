@@ -38,6 +38,9 @@ var _actions = require('../redux/actions');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var _jsxFileName = '/Users/jmichaelstewart/Code/awesomePotatoes/components/AuthButton.js';
+
+
 var AuthButton = function (_React$Component) {
   (0, _inherits3.default)(AuthButton, _React$Component);
 
@@ -98,9 +101,22 @@ var AuthButton = function (_React$Component) {
       var loggedIn = this.props.loggedIn;
 
       console.log('sanity check from AB');
-      var loginButton = loggedIn ? _react2.default.createElement('button', { onClick: this.logout.bind(this) }, 'Logout') : _react2.default.createElement('button', { onClick: this.login.bind(this) }, 'Login');
+      var loginButton = loggedIn ? _react2.default.createElement('button', { onClick: this.logout.bind(this), __source: {
+          fileName: _jsxFileName,
+          lineNumber: 48
+        }
+      }, 'Logout') : _react2.default.createElement('button', { onClick: this.login.bind(this), __source: {
+          fileName: _jsxFileName,
+          lineNumber: 49
+        }
+      }, 'Login');
 
-      return _react2.default.createElement('div', null, loginButton);
+      return _react2.default.createElement('div', {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 52
+        }
+      }, loginButton);
     }
   }]);
 
@@ -126,3 +142,4 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(AuthButton);
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvQXV0aEJ1dHRvbi5qcyJdLCJuYW1lcyI6WyJjb25uZWN0IiwiQXV0aCIsImluaXRTdG9yZSIsImxvZ2luIiwibG9nb3V0IiwiQXV0aEJ1dHRvbiIsInN0b3JlIiwiaXNTZXJ2ZXIiLCJnZXRTdGF0ZSIsInByb3BzIiwiYXV0aCIsImxvY2siLCJnZXRMb2NrIiwib24iLCJkYXRhIiwiYWNjZXNzVG9rZW4iLCJjb25zb2xlIiwibG9nIiwiZ2V0VXNlckluZm8iLCJlcnJvciIsInByb2ZpbGUiLCJsb2dnZWRJbiIsImxvZ2luQnV0dG9uIiwiYmluZCIsIlJlYWN0IiwiQ29tcG9uZW50IiwibWFwU3RhdGVUb1Byb3BzIiwibWFwRGlzcGF0Y2hUb1Byb3BzIiwiZGlzcGF0Y2giXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQVM7O0FBQ1QsQUFBTyxBQUFVOzs7O0FBQ2pCLEFBQVMsQUFBVyxBQUFPLEFBQWM7Ozs7Ozs7SUFFbkMsQTs7Ozs7MENBQ3lDO1VBQW5CLEFBQW1CLGFBQW5CLEFBQW1CO1VBQVosQUFBWSxnQkFBWixBQUFZLEFBQzNDOztVQUFBLEFBQUksVUFBVSxBQUNaO2VBQUEsQUFBTyxBQUNSO0FBRkQsYUFFTyxBQUNMO2VBQU8sTUFBUCxBQUFPLEFBQU0sQUFDZDtBQUNGO0FBRUQ7OztzQkFBQSxBQUFZLE9BQU87d0NBQUE7O3lJQUFBLEFBQ1gsQUFDUDs7Ozs7d0NBRW1CO21CQUNsQjs7V0FBQSxBQUFLLE9BQUwsQUFBWSxBQUFJLEFBQ2hCO1dBQUEsQUFBSyxPQUFPLEtBQUEsQUFBSyxLQUFqQixBQUFZLEFBQVUsQUFDdEI7V0FBQSxBQUFLLEtBQUwsQUFBVSxHQUFWLEFBQWEsaUJBQWlCLFVBQUEsQUFBQyxNQUFTO1lBQUEsQUFDOUIsY0FEOEIsQUFDZCxLQURjLEFBQzlCLEFBQ1I7O2dCQUFBLEFBQVEsSUFBUixBQUFZLGdCQUFaLEFBQTRCLEFBQzVCO2VBQUEsQUFBSyxLQUFMLEFBQVUsWUFBVixBQUFzQixhQUFhLFVBQUEsQUFBQyxPQUFELEFBQVEsU0FBWSxBQUNyRDtjQUFJLENBQUosQUFBSyxPQUFPLEFBQ1Y7b0JBQUEsQUFBUSxJQUFSLEFBQVksYUFBWixBQUF5QixBQUMxQjtBQUNGO0FBSkQsQUFLQTtlQUFBLEFBQUssTUFBTCxBQUFXLEFBRVg7O0FBRUQ7QUFaRCxBQWFEOzs7OzRCQUVPLEFBQ047V0FBQSxBQUFLLEtBQUwsQUFBVSxBQUNYOzs7OzZCQUVRLEFBQ1A7V0FBQSxBQUFLLE1BQUwsQUFBVyxBQUNaOzs7OzZCQUVTO1VBQUEsQUFDQSxXQUFhLEtBRGIsQUFDa0IsTUFEbEIsQUFDQSxBQUNSOztjQUFBLEFBQVEsSUFBUixBQUFZLEFBQ1o7VUFBTSx5Q0FDSixjQUFBLFlBQVEsU0FBUyxLQUFBLEFBQUssT0FBTCxBQUFZLEtBQTdCLEFBQWlCLEFBQWlCO29CQUFsQztzQkFBQTtBQUFBO09BQUEsRUFEa0IsQUFDbEIsU0FEa0IsbUJBRWxCLGNBQUEsWUFBUSxTQUFTLEtBQUEsQUFBSyxNQUFMLEFBQVcsS0FBNUIsQUFBaUIsQUFBZ0I7b0JBQWpDO3NCQUFBO0FBQUE7T0FBQSxFQUZGLEFBRUUsQUFFRjs7NkJBQ0UsY0FBQTs7b0JBQUE7c0JBQUEsQUFDSTtBQURKO0FBQUEsT0FBQSxFQURGLEFBQ0UsQUFJSDs7Ozs7RUFuRHNCLGdCLEFBQU07O0FBb0Q5Qjs7QUFFRCxJQUFNLGtCQUFrQixTQUFsQixBQUFrQix1QkFBQTtNQUFBLEFBQUcsaUJBQUgsQUFBRztTQUFnQixFQUFFLFVBQXJCLEFBQW1CO0FBQTNDOztBQUVBLElBQU0scUJBQXFCLFNBQXJCLEFBQXFCLG1CQUFBLEFBQUMsVUFBYSxBQUN2Qzs7V0FDUyxpQkFBQTthQUFNLFNBQU4sQUFBTSxBQUFTO0FBRGpCLEFBRUw7WUFBUSxrQkFBQTthQUFNLFNBQU4sQUFBTSxBQUFTO0FBRnpCLEFBQU8sQUFJUjtBQUpRLEFBQ0w7QUFGSixBQU9BOztrQkFBZSx5QkFBQSxBQUNiLGlCQURhLEFBRWIsb0JBRkYsQUFBZSxBQUdiIiwiZmlsZSI6IkF1dGhCdXR0b24uanMiLCJzb3VyY2VSb290IjoiL1VzZXJzL2ptaWNoYWVsc3Rld2FydC9Db2RlL2F3ZXNvbWVQb3RhdG9lcyJ9

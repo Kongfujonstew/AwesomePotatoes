@@ -1,6 +1,0 @@
-
-          window.__NEXT_REGISTER_PAGE('/home', function() {
-            var comp = module.exports=webpackJsonp([5],{644:function(e,t,u){e.exports=u(645)},645:function(e,t,u){"use strict";function n(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0});var o=u(21),l=n(o),r=u(9),a=n(r),s=u(10),f=n(s),i=u(22),d=n(i),c=u(23),p=n(c),h=u(6),_=n(h),v=(u(51),u(292)),m=n(v),g=u(293),y=n(g),k=u(107),b=n(k),x=u(294),M=(n(x),function(e){function t(e){return(0,a.default)(this,t),(0,d.default)(this,(t.__proto__||(0,l.default)(t)).call(this,e))}return(0,p.default)(t,e),(0,f.default)(t,[{key:"render",value:function(){return console.log("this.state: ",this.state),console.log("this.props: ",this.props),_.default.createElement(b.default,null,"Home")}}],[{key:"getInitialProps",value:function(e){var t=e.store,u=e.isServer;e.pathname,e.query;return u?{}:t.getState()}}]),t}(_.default.Component));t.default=(0,m.default)(y.default)(M)}},[644]);
-            return { page: comp.default }
-          })
-        

@@ -24,11 +24,11 @@ class Index extends React.Component {
     return (
       <Layout>
         Index
+        <MoviesWithData />
       </Layout>
     );
   };
 };
 
-        // <MoviesWithData />
 
 export default withRedux(pageConfig)(Index);

@@ -34,6 +34,8 @@ var _document2 = _interopRequireDefault(_document);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var _jsxFileName = "/Users/jmichaelstewart/Code/awesomePotatoes/pages/_document.js?entry";
+
 // import flush from 'styled-jsx/server'
 
 //vendor scripts go here.
@@ -50,7 +52,44 @@ var MyDocument = function (_Document) {
   (0, _createClass3.default)(MyDocument, [{
     key: "render",
     value: function render() {
-      return _react2.default.createElement("html", null, _react2.default.createElement(_document.Head, null, _react2.default.createElement("title", null, "Awesome Potatoes"), _react2.default.createElement("meta", { name: "viewport", content: "width=device-width, initial-scale=1" }), _react2.default.createElement("script", { src: "https://cdn.auth0.com/js/lock/10.5/lock.min.js" })), _react2.default.createElement("body", { className: "custom_class" }, this.props.customValue, _react2.default.createElement(_document.Main, null), _react2.default.createElement(_document.NextScript, null)));
+      return _react2.default.createElement("html", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        }
+      }, _react2.default.createElement(_document.Head, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16
+        }
+      }, _react2.default.createElement("title", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
+        }
+      }, "Awesome Potatoes"), _react2.default.createElement("meta", { name: "viewport", content: "width=device-width, initial-scale=1", __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18
+        }
+      }), _react2.default.createElement("script", { src: "https://cdn.auth0.com/js/lock/10.5/lock.min.js", __source: {
+          fileName: _jsxFileName,
+          lineNumber: 19
+        }
+      })), _react2.default.createElement("body", { className: "custom_class", __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        }
+      }, this.props.customValue, _react2.default.createElement(_document.Main, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 23
+        }
+      }), _react2.default.createElement(_document.NextScript, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24
+        }
+      })));
     }
   }], [{
     key: "getInitialProps",
@@ -73,3 +112,4 @@ var MyDocument = function (_Document) {
 }(_document2.default);
 
 exports.default = MyDocument;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzL19kb2N1bWVudC5qcyJdLCJuYW1lcyI6WyJEb2N1bWVudCIsIkhlYWQiLCJNYWluIiwiTmV4dFNjcmlwdCIsIk15RG9jdW1lbnQiLCJwcm9wcyIsImN1c3RvbVZhbHVlIiwicmVuZGVyUGFnZSIsImh0bWwiLCJoZWFkIiwiZXJyb3JIdG1sIiwiY2h1bmtzIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVksQUFBTSxBQUFNOzs7Ozs7OztBQUMvQjs7QUFFQTs7SUFFcUIsQTs7Ozs7Ozs7Ozs7NkJBT1YsQUFDUDs2QkFDRSxjQUFBOztvQkFBQTtzQkFBQSxBQUNFO0FBREY7QUFBQSxPQUFBLGtCQUNFLEFBQUM7O29CQUFEO3NCQUFBLEFBQ0U7QUFERjtBQUFBLHlCQUNFLGNBQUE7O29CQUFBO3NCQUFBO0FBQUE7QUFBQSxTQURGLEFBQ0UsQUFDQSw2REFBTSxNQUFOLEFBQVcsWUFBVyxTQUF0QixBQUE4QjtvQkFBOUI7c0JBRkYsQUFFRSxBQUNBO0FBREE7b0RBQ1EsS0FBUixBQUFZO29CQUFaO3NCQUpKLEFBQ0UsQUFHRSxBQUVGO0FBRkU7MkJBRUYsY0FBQSxVQUFNLFdBQU4sQUFBZ0I7b0JBQWhCO3NCQUFBLEFBQ0c7QUFESDtjQUNHLEFBQUssTUFEUixBQUNjLEFBQ1osNkJBQUEsQUFBQzs7b0JBQUQ7c0JBRkYsQUFFRSxBQUNBO0FBREE7QUFBQSwwQkFDQSxBQUFDOztvQkFBRDtzQkFWTixBQUNFLEFBTUUsQUFHRSxBQUlQO0FBSk87QUFBQTs7OzswQ0FqQitCO1VBQWQsQUFBYyxrQkFBZCxBQUFjOzt3QkFBQSxBQUNLO1VBREwsQUFDN0IsbUJBRDZCLEFBQzdCO1VBRDZCLEFBQ3ZCLG1CQUR1QixBQUN2QjtVQUR1QixBQUNqQix3QkFEaUIsQUFDakI7VUFEaUIsQUFDTixxQkFETSxBQUNOLEFBQy9CO0FBQ0E7OzthQUFPLEVBQUUsTUFBRixNQUFRLE1BQVIsTUFBYyxXQUFkLFdBQXlCLFFBQWhDLEFBQU8sQUFDUjs7Ozs7QUFMcUMsQTs7a0JBQW5CLEEiLCJmaWxlIjoiX2RvY3VtZW50LmpzP2VudHJ5Iiwic291cmNlUm9vdCI6Ii9Vc2Vycy9qbWljaGFlbHN0ZXdhcnQvQ29kZS9hd2Vzb21lUG90YXRvZXMifQ==

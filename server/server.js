@@ -4,6 +4,8 @@ import next from 'next';
 import morgan from 'morgan';
 import path from 'path';
 
+require('dotenv').config();
+
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
 const handle = app.getRequestHandler();
