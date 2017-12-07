@@ -9,6 +9,8 @@ const app = next({ dev });
 const handle = app.getRequestHandler();
 const port = process.env.PORT || 3000;
 
+console.log('here is port: ', port);
+
 app.prepare().then(() => {
   const server = express();
   server.use(express.static(path.resolve(__dirname, 'public')));
