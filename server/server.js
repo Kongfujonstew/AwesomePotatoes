@@ -15,7 +15,8 @@ console.log('here is port: ', port);
 
 app.prepare().then(() => {
   const server = express();
-  server.use(express.static(path.resolve(__dirname, 'public')));
+  // server.use(express.static(path.resolve(__dirname, './public')));
+  app.use(express.static('public'));
 
   // CUSTOM ROUTES
   server.get('/results', (req, res) => {

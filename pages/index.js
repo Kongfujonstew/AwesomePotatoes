@@ -2,8 +2,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import withRedux from 'next-redux-wrapper';
 import pageConfig from '../redux/pageConfig';
-import Layout from '../components/Layout';
-import MoviesWithData from '../components_apollo/MoviesWithData';
+import Layout from '../components_layout/Main';
+import IndexComponent from '../components_pages/Index';
 
 class Index extends React.Component {
   constructor(props) {
@@ -19,16 +19,14 @@ class Index extends React.Component {
   };
 
   render () {
-    console.log('this.state: ', this.state);
-    console.log('this.props: ', this.props);
     return (
-      <Layout>
-        Index
-        <MoviesWithData />
-      </Layout>
+      <div id="container">
+        <Layout>
+          <IndexComponent />
+        </Layout>
+      </div>
     );
   };
 };
-
 
 export default withRedux(pageConfig)(Index);

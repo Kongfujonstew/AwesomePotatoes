@@ -1,5 +1,5 @@
 import { bindActionCreators } from 'redux';
-import { login, logout } from './actions';
+import { login, logout, selectMovie } from './actions';
 import initStore from './index';
 
 const mapStateToProps = ({ loggedIn }) => ({ loggedIn });
@@ -7,7 +7,8 @@ const mapStateToProps = ({ loggedIn }) => ({ loggedIn });
 const mapDispatchToProps = (dispatch) => {
   return {
     login: bindActionCreators(login, dispatch),
-    logout: bindActionCreators(logout, dispatch)
+    logout: bindActionCreators(logout, dispatch),
+    selectMovie: bindActionCreators(selectMovie, dispatch)
   }
 };
 

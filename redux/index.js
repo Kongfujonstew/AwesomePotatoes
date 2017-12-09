@@ -7,9 +7,11 @@ import actionTypes from './actionTypes';
 const reducer = (state = { loggedIn: false }, action) => {
   switch (action.type) {
     case actionTypes.LOGIN:
-      return Object.assign({}, state, { loggedIn: true });
+      return Object.assign({}, state, { loggedIn: true, profile: action.profile });
     case actionTypes.LOGOUT:
-      return Object.assign({}, state, { loggedIn: false });
+      return Object.assign({}, state, { loggedIn: false, profile: action.profile });
+    case actionTypes.SELECT_MOVIE:
+      return Object.assign({}, state, { selectedMovieId: action.movieId });
     default: return state
   };
 };

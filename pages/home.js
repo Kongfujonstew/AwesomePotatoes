@@ -2,8 +2,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import withRedux from 'next-redux-wrapper';
 import pageConfig from '../redux/pageConfig';
-import Layout from '../components/Layout';
-import MoviesWithData from '../components_apollo/MoviesWithData';
+import Layout from '../components_layout/Main';
+import HomeComponent from '../components_pages/Home';
 
 class Home extends React.Component {
   constructor(props) {
@@ -19,16 +19,12 @@ class Home extends React.Component {
   };
 
   render () {
-    console.log('this.state: ', this.state);
-    console.log('this.props: ', this.props);
     return (
       <Layout>
-        Home
+        <HomeComponent />
       </Layout>
     );
   };
 };
-
-        // <MoviesWithData />
 
 export default withRedux(pageConfig)(Home);
