@@ -92,6 +92,8 @@ var MovieCard = function (_React$Component) {
   return MovieCard;
 }(_react2.default.Component);
 
+;
+
 var mapStateToProps = function mapStateToProps(_ref2) {
   var selectedMovieId = _ref2.selectedMovieId;
   return { selectedMovieId: selectedMovieId };

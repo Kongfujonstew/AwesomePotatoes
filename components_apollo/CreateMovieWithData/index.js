@@ -40,8 +40,8 @@ class CreateMovie extends React.Component {
         </form>
       </div>
     );
-  };
-}
+  }
+};
 
 const CreateMovieWithData = graphql(CreateMovieMutation)
 (CreateMovie);

@@ -69,7 +69,7 @@ var GraphcoolProfile = function (_React$Component) {
     value: function render() {
       while (this.props.data.loading) {
         return 'loading';
-      }
+      };
       var _props$data$allUsers$ = this.props.data.allUsers[0],
           auth0Id = _props$data$allUsers$.auth0Id,
           name = _props$data$allUsers$.name,
@@ -82,6 +82,8 @@ var GraphcoolProfile = function (_React$Component) {
 
   return GraphcoolProfile;
 }(_react2.default.Component);
+
+;
 
 var DataComponent = (0, _reactApollo.graphql)(_apollo.GetUserByGraphcoolIdQuery, {
   options: function options(_ref2) {

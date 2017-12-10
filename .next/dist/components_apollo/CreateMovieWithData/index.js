@@ -75,6 +75,8 @@ var CreateMovie = function (_React$Component) {
   return CreateMovie;
 }(_react2.default.Component);
 
+;
+
 var CreateMovieWithData = (0, _reactApollo.graphql)(_apollo.CreateMovieMutation)(CreateMovie);
 
 exports.default = function () {

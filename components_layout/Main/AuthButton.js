@@ -7,7 +7,7 @@ const url = process.env.GRAPHCOOL_URI;
 class AuthButton extends React.Component {
   static getInitialProps ({ store, isServer }) {
     if (isServer) {
-      return {}
+      return {};
     } else {
       return store.getState();
     }
@@ -15,7 +15,7 @@ class AuthButton extends React.Component {
 
   constructor(props) {
     super(props);
-  };
+  }
 
   componentDidMount() {
     this.auth = new Auth();
@@ -26,7 +26,7 @@ class AuthButton extends React.Component {
         this.handleAuth(profile);
       });
     });
-  };
+  }
 
   async handleAuth(profile) {
     const graphcoolId = await this.getGraphCoolUserIdIfExists(profile.email) ||

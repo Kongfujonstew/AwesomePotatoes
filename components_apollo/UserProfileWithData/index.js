@@ -7,7 +7,7 @@ import { GetUserByGraphcoolIdQuery } from '../../apollo';
 class GraphcoolProfile extends React.Component {
   static getInitialProps ({ store, isServer }) {
     if (isServer) {
-      return {}
+      return {};
     } else {
       return store.getState();
     }
@@ -15,7 +15,7 @@ class GraphcoolProfile extends React.Component {
 
   constructor(props) {
     super(props);
-  };
+  }
 
   componentDidMount () {
     this.props.data.refetch();
@@ -24,7 +24,7 @@ class GraphcoolProfile extends React.Component {
   render () {
     while (this.props.data.loading) {
       return 'loading';
-    }
+    };
     const { auth0Id, name, email, id } = this.props.data.allUsers[0];
     return (
       <div>
@@ -36,7 +36,7 @@ class GraphcoolProfile extends React.Component {
       </div>
     )
   }
-}
+};
 
 const DataComponent = graphql(GetUserByGraphcoolIdQuery, {
   options: ({ graphcoolId }) => ({ variables: { id: graphcoolId }})

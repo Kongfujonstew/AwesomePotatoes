@@ -9,7 +9,7 @@ const url = process.env.GRAPHCOOL_URI;
 class MovieInfo extends React.Component {
   static getInitialProps ({ store, isServer }) {
     if (isServer) {
-      return {}
+      return {};
     } else {
       return store.getState();
     }
@@ -64,7 +64,7 @@ class MovieInfo extends React.Component {
         <div>{'likes: ' + likes.length}</div>
       </div>
     );
-  };
+  }
 };
 
 export default () => <MovieInfo/>

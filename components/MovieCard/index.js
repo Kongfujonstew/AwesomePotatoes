@@ -8,7 +8,7 @@ import Card from './styledCard';
 class MovieCard extends React.Component {
   static getInitialProps ({ store, isServer }) {
     if (isServer) {
-      return {}
+      return {};
     } else {
       return store.getState();
     }
@@ -16,7 +16,7 @@ class MovieCard extends React.Component {
 
   constructor(props) {
     super(props);
-  };
+  }
 
   handleClick () {
     const id = this.props.movie.id;
@@ -39,8 +39,8 @@ class MovieCard extends React.Component {
         </div>
       </Card>
     );
-  };
-}
+  }
+};
 
 const mapStateToProps = ({ selectedMovieId }) => ({ selectedMovieId });
 

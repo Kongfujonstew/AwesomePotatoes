@@ -6,7 +6,7 @@ import { client } from '../../apollo';
 class Like extends React.Component {
   static getInitialProps ({ store, isServer }) {
     if (isServer) {
-      return {}
+      return {};
     } else {
       return store.getState();
     }
@@ -14,7 +14,7 @@ class Like extends React.Component {
 
   constructor(props) {
     super(props);
-  };
+  }
 
   handleClick () {
     const id = this.props.movie.id;
@@ -27,17 +27,8 @@ class Like extends React.Component {
       <div className="like"
         onClick={this.handleClick.bind(this)}
       > {'Like'}
-      <style jsx>{`
-        .like {
-          color: green;
-          font-family: 'Cabin', sans-serif;
-        }
-        .like:hover {
-          cursor: pointer;
-        }
-      `}</style>
       </div>
     );
-  };
+  }
 };
 
