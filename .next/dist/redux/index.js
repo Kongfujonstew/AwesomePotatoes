@@ -43,6 +43,7 @@ var reducer = function reducer() {
   };
 };
 
+//STATE PERSISTENCE
 var persistState = function persistState(reducer) {
   return function (state, action) {
     var newState = reducer(state, action);
@@ -65,6 +66,8 @@ exports.default = function () {
     if (typeof window === 'undefined') {
       return {};
     } else {
+      var persistedState = JSON.parse(localStorage.getItem('reduxState'));
+      var state = persistedState ? persistedState : { loggedIn: false };
       return JSON.parse(localStorage.getItem('reduxState'));
     }
   };

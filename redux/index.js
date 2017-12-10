@@ -16,7 +16,7 @@ const reducer = (state = { loggedIn: false }, action) => {
   };
 };
 
-
+//STATE PERSISTENCE
 const persistState = (reducer) => {
   return (state, action) => {
     const newState = reducer(state, action)
@@ -38,9 +38,12 @@ export default () => {
     if (typeof window === 'undefined') {
       return {};
     } else {
+      const persistedState = JSON.parse(localStorage.getItem('reduxState'));
+      const state = persistedState ? persistedState : { loggedIn: false };
       return JSON.parse(localStorage.getItem('reduxState'));
     }
   }
+
 
   const store = createStore(persistedReducer,
     getPersistedState(),
