@@ -60,7 +60,7 @@ class MovieInfo extends React.Component {
       <div>
         {'Graphcool movie data queried by Id: '}
         <div>{'name: ' + name}</div>
-        <div>{'description: ' + name}</div>
+        <div>{'description: ' + description}</div>
         <div>{'likes: ' + likes.length}</div>
       </div>
     );

@@ -104,7 +104,7 @@ var MovieInfo = function (_React$Component) {
           description = _state$movie.description,
           likes = _state$movie.likes;
 
-      return _react2.default.createElement('div', null, 'Graphcool movie data queried by Id: ', _react2.default.createElement('div', null, 'name: ' + name), _react2.default.createElement('div', null, 'description: ' + name), _react2.default.createElement('div', null, 'likes: ' + likes.length));
+      return _react2.default.createElement('div', null, 'Graphcool movie data queried by Id: ', _react2.default.createElement('div', null, 'name: ' + name), _react2.default.createElement('div', null, 'description: ' + description), _react2.default.createElement('div', null, 'likes: ' + likes.length));
     }
   }]);
 
