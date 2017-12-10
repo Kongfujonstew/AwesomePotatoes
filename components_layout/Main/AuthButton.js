@@ -25,7 +25,6 @@ class AuthButton extends React.Component {
       this.lock.getUserInfo(accessToken, (error, profile) => {
         this.handleAuth(profile);
       });
-      console.log('Auth0 authenticated profile: ', this.props.profile)
     });
   };
 
@@ -40,7 +39,6 @@ class AuthButton extends React.Component {
   }
 
   getGraphCoolUserIdIfExists (email) {
-    console.log('refetch on email: ', email)
     return axios.post(url, {
       headers: { 'Content-Type': 'application/json' },
       query: `query {
@@ -52,7 +50,6 @@ class AuthButton extends React.Component {
     })
       .catch(err => console.log('err retrieving graphcool user: ', err))
       .then(({ data }) => {
-        console.log('getGraphCoolUserIdIfExists data: ', data);
         if (data.data.allUsers && data.data.allUsers.length) {
           return data.data.allUsers[0].id;
         } else {
@@ -62,14 +59,12 @@ class AuthButton extends React.Component {
   }
 
   createGraphCoolUser(profile) {
-    console.log('creating Graphcool user')
     let { email, user_id, name, nickname } = profile;
     name = (name === email) ? nickname : name;
     const options = {variables: { name, email, auth0Id: user_id }};
     return this.props.createUser(options)
       .catch(err => console.log('error update or create new graphcool user:', err))    
       .then(({ data} ) => {
-        console.log('data on create graphcool user: ', data)
         return data.createUser.id;
       });
   }
@@ -83,7 +78,6 @@ class AuthButton extends React.Component {
   }
 
   render () {
-    console.log('props on authButton (withData) :', this.props)
     const { loggedIn, profile } = this.props;
     const loginButton = loggedIn ? 
       <div>

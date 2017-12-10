@@ -12,12 +12,41 @@ const reducer = (state = { loggedIn: false }, action) => {
       return Object.assign({}, state, { loggedIn: false, profile: action.profile });
     case actionTypes.SELECT_MOVIE:
       return Object.assign({}, state, { selectedMovieId: action.movieId });
-    default: return state
+    default: return state;
   };
 };
 
+
+const persistState = (reducer) => {
+  return (state, action) => {
+    const newState = reducer(state, action)
+    if (typeof window === 'undefined') {
+      return {};
+    } else {
+      localStorage.setItem('reduxState', JSON.stringify(newState));
+      return newState;
+    }   
+  }
+}
+
+const persistedReducer = persistState(reducer);
+
 // ACTIONS
-export default (initialState = { loggedIn: false }) => {
-  console.log('creating store');
-  return createStore(reducer, initialState, composeWithDevTools(applyMiddleware(thunkMiddleware)));
+export default () => {
+
+  const getPersistedState = () => {
+    if (typeof window === 'undefined') {
+      return {};
+    } else {
+      return JSON.parse(localStorage.getItem('reduxState'));
+    }
+  }
+
+  const store = createStore(persistedReducer,
+    getPersistedState(),
+    composeWithDevTools(
+      applyMiddleware(thunkMiddleware)));
+
+
+  return store;
 };

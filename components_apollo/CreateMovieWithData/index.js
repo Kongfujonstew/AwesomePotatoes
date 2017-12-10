@@ -26,7 +26,6 @@ class CreateMovie extends React.Component {
 
 
   render () {
-    console.log('props in CreateMovie: ', this.props);
     return (
       <div>
         <form>

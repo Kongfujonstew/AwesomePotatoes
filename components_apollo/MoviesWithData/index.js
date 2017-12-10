@@ -6,7 +6,6 @@ import MovieCard from '../../components/MovieCard';
 
 const AllMovies = (props) => {
   const {data: { allMovies }} = props;
-  console.log('props in Movies: ', props);
   return (
     <div id="cards">
       {allMovies ? allMovies.map(movie => { //.length?

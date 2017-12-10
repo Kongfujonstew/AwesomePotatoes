@@ -25,7 +25,6 @@ class MovieCard extends React.Component {
 
   render () {
     const {movie: { name, description, likes, id }} = this.props;
-    console.log('movie data: ', this.props.movie)
     const likesNumber = likes.length
     return (
       <Card>

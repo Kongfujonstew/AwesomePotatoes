@@ -42,25 +42,25 @@ var _Main = require('../components_layout/Main');
 
 var _Main2 = _interopRequireDefault(_Main);
 
-var _Home = require('../components_pages/Home');
+var _Admin = require('../components_pages/Admin');
 
-var _Home2 = _interopRequireDefault(_Home);
+var _Admin2 = _interopRequireDefault(_Admin);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Home = function (_React$Component) {
-  (0, _inherits3.default)(Home, _React$Component);
+var Admin = function (_React$Component) {
+  (0, _inherits3.default)(Admin, _React$Component);
 
-  function Home(props) {
-    (0, _classCallCheck3.default)(this, Home);
+  function Admin(props) {
+    (0, _classCallCheck3.default)(this, Admin);
 
-    return (0, _possibleConstructorReturn3.default)(this, (Home.__proto__ || (0, _getPrototypeOf2.default)(Home)).call(this, props));
+    return (0, _possibleConstructorReturn3.default)(this, (Admin.__proto__ || (0, _getPrototypeOf2.default)(Admin)).call(this, props));
   }
 
-  (0, _createClass3.default)(Home, [{
+  (0, _createClass3.default)(Admin, [{
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(_Main2.default, null, _react2.default.createElement(_Home2.default, null));
+      return _react2.default.createElement(_Main2.default, null, _react2.default.createElement(_Admin2.default, null));
     }
   }], [{
     key: 'getInitialProps',
@@ -78,9 +78,9 @@ var Home = function (_React$Component) {
     }
   }]);
 
-  return Home;
+  return Admin;
 }(_react2.default.Component);
 
 ;
 
-exports.default = (0, _nextReduxWrapper2.default)(_pageConfig2.default)(Home);
+exports.default = (0, _nextReduxWrapper2.default)(_pageConfig2.default)(Admin);

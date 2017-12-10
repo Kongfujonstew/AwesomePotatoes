@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
 import axios from 'axios';
-// import { connect } from 'react-redux';
 import { graphql } from 'react-apollo';
 import { GetMovieByGraphcoolIdQuery } from '../../apollo';
 
@@ -25,12 +24,10 @@ class MovieInfo extends React.Component {
     let id;
     if (window) {
       id = window.location.search.slice(4);
-      console.log('bla id: ', id);
     }
     id && this.fetchMovieData(id)
       .catch(err => console.log('fetchMovieData err: ', err))
       .then(data => {
-        console.log(' data onfethmd: ', data.data.data);
         if (data.data.data.allMovies && data.data.data.allMovies[0]){
           this.setState({movie: data.data.data.allMovies[0]});
         };
@@ -58,7 +55,6 @@ class MovieInfo extends React.Component {
     if (!this.state.movie) {
       return 'loading . . .'
     };
-    // const {movie: { name, description, likes }} = this.props.data.getAllMovies;
     const { name, description, likes } = this.state.movie
     return (
       <div>

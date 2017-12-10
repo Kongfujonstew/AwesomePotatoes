@@ -44,9 +44,6 @@ var _styledCard2 = _interopRequireDefault(_styledCard);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = '/Users/jmichaelstewart/Code/awesomePotatoes/components/MovieCard/index.js';
-
-
 var MovieCard = function (_React$Component) {
   (0, _inherits3.default)(MovieCard, _React$Component);
 
@@ -85,38 +82,10 @@ var MovieCard = function (_React$Component) {
           likes = _props$movie.likes,
           id = _props$movie.id;
 
-      console.log('movie data: ', this.props.movie);
       var likesNumber = likes.length;
-      return _react2.default.createElement(_styledCard2.default, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 31
-        }
-      }, _react2.default.createElement('div', { className: 'card', __source: {
-          fileName: _jsxFileName,
-          lineNumber: 32
-        }
-      }, _react2.default.createElement(_link2.default, { href: '/movie?id=' + id, __source: {
-          fileName: _jsxFileName,
-          lineNumber: 33
-        }
-      }, _react2.default.createElement('h3', { className: 'hover',
-        onClick: this.handleClick.bind(this),
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 34
-        }
-      }, name ? name : 'No title')), _react2.default.createElement('p', {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 38
-        }
-      }, 'Likes: ', likesNumber), _react2.default.createElement('p', {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 39
-        }
-      }, 'Summary: ', description)));
+      return _react2.default.createElement(_styledCard2.default, null, _react2.default.createElement('div', { className: 'card' }, _react2.default.createElement(_link2.default, { href: '/movie?id=' + id }, _react2.default.createElement('h3', { className: 'hover',
+        onClick: this.handleClick.bind(this)
+      }, name ? name : 'No title')), _react2.default.createElement('p', null, 'Likes: ', likesNumber), _react2.default.createElement('p', null, 'Summary: ', description)));
     }
   }]);
 
@@ -137,4 +106,3 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
 };
 
 exports.default = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps)(MovieCard);
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvTW92aWVDYXJkL2luZGV4LmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwicmVuZGVyIiwiY29ubmVjdCIsIkxpbmsiLCJzZWxlY3RNb3ZpZSIsIkNhcmQiLCJNb3ZpZUNhcmQiLCJzdG9yZSIsImlzU2VydmVyIiwiZ2V0U3RhdGUiLCJwcm9wcyIsImlkIiwibW92aWUiLCJuYW1lIiwiZGVzY3JpcHRpb24iLCJsaWtlcyIsImNvbnNvbGUiLCJsb2ciLCJsaWtlc051bWJlciIsImxlbmd0aCIsImhhbmRsZUNsaWNrIiwiYmluZCIsIkNvbXBvbmVudCIsIm1hcFN0YXRlVG9Qcm9wcyIsInNlbGVjdGVkTW92aWVJZCIsIm1hcERpc3BhdGNoVG9Qcm9wcyIsImRpc3BhdGNoIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU87Ozs7QUFDUCxBQUFTOztBQUNULEFBQVM7O0FBQ1QsQUFBTzs7OztBQUNQLEFBQVMsQUFBbUI7O0FBQzVCLEFBQU8sQUFBVTs7Ozs7Ozs7O0lBRVgsQTs7Ozs7MENBQ3lDO1VBQW5CLEFBQW1CLGFBQW5CLEFBQW1CO1VBQVosQUFBWSxnQkFBWixBQUFZLEFBQzNDOztVQUFBLEFBQUksVUFBVSxBQUNaO2VBQUEsQUFBTyxBQUNSO0FBRkQsYUFFTyxBQUNMO2VBQU8sTUFBUCxBQUFPLEFBQU0sQUFDZDtBQUNGO0FBRUQ7OztxQkFBQSxBQUFZLE9BQU87d0NBQUE7O3VJQUFBLEFBQ1gsQUFDUDs7Ozs7a0NBRWMsQUFDYjtVQUFNLEtBQUssS0FBQSxBQUFLLE1BQUwsQUFBVyxNQUF0QixBQUE0QixBQUM1QjtXQUFBLEFBQUssTUFBTCxBQUFXLFlBQVksS0FBQSxBQUFLLE1BQUwsQUFBVyxNQUFsQyxBQUF3QyxBQUN6Qzs7Ozs2QkFFUzt5QkFDMEMsS0FEMUMsQUFDK0MsTUFEL0MsQUFDRDtVQURDLEFBQ1Esb0JBRFIsQUFDUTtVQURSLEFBQ2MsMkJBRGQsQUFDYztVQURkLEFBQzJCLHFCQUQzQixBQUMyQjtVQUQzQixBQUNrQyxrQkFEbEMsQUFDa0MsQUFDMUM7O2NBQUEsQUFBUSxJQUFSLEFBQVksZ0JBQWdCLEtBQUEsQUFBSyxNQUFqQyxBQUF1QyxBQUN2QztVQUFNLGNBQWMsTUFBcEIsQUFBMEIsQUFDMUI7NkJBQ0UsQUFBQzs7b0JBQUQ7c0JBQUEsQUFDRTtBQURGO0FBQUEsT0FBQSxrQkFDRSxjQUFBLFNBQUssV0FBTCxBQUFlO29CQUFmO3NCQUFBLEFBQ0U7QUFERjt5QkFDRSxBQUFDLGdDQUFLLHFCQUFOLEFBQXlCO29CQUF6QjtzQkFBQSxBQUNFO0FBREY7eUJBQ0UsY0FBQSxRQUFJLFdBQUosQUFBYyxBQUNaO2lCQUFTLEtBQUEsQUFBSyxZQUFMLEFBQWlCLEtBRDVCLEFBQ1csQUFBc0I7O29CQURqQztzQkFBQSxBQUVFO0FBRkY7Z0JBRUUsQUFBTyxPQUpiLEFBQ0UsQUFDRSxBQUVnQixBQUVsQiw4QkFBQSxjQUFBOztvQkFBQTtzQkFBQTtBQUFBO0FBQUEsU0FBVyxXQU5iLEFBTUUsQUFDQSw4QkFBQSxjQUFBOztvQkFBQTtzQkFBQTtBQUFBO0FBQUEsU0FBYSxhQVRuQixBQUNFLEFBQ0UsQUFPRSxBQUlQOzs7OztFQW5DcUIsZ0IsQUFBTTs7QUFzQzlCLElBQU0sa0JBQWtCLFNBQWxCLEFBQWtCLHVCQUFBO01BQUEsQUFBRyx3QkFBSCxBQUFHO1NBQXVCLEVBQUUsaUJBQTVCLEFBQTBCO0FBQWxEOztBQUVBLElBQU0scUJBQXFCLFNBQXJCLEFBQXFCLG1CQUFBLEFBQUMsVUFBYSxBQUN2Qzs7aUJBQ2UscUJBQUEsQUFBQyxpQkFBRDthQUFxQixTQUFTLDBCQUE5QixBQUFxQixBQUFTLEFBQVk7QUFEekQsQUFBTyxBQUdSO0FBSFEsQUFDTDtBQUZKLEFBTUE7O2tCQUFlLHlCQUFBLEFBQ2IsaUJBRGEsQUFFYixvQkFGRixBQUFlLEFBR2IiLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiL1VzZXJzL2ptaWNoYWVsc3Rld2FydC9Db2RlL2F3ZXNvbWVQb3RhdG9lcyJ9
