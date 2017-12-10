@@ -68,7 +68,7 @@ exports.default = function () {
     } else {
       var persistedState = JSON.parse(localStorage.getItem('reduxState'));
       var state = persistedState ? persistedState : { loggedIn: false };
-      return JSON.parse(localStorage.getItem('reduxState'));
+      return state;
     }
   };
 

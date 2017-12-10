@@ -40,7 +40,7 @@ export default () => {
     } else {
       const persistedState = JSON.parse(localStorage.getItem('reduxState'));
       const state = persistedState ? persistedState : { loggedIn: false };
-      return JSON.parse(localStorage.getItem('reduxState'));
+      return state;
     }
   }
 
