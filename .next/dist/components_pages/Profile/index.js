@@ -46,8 +46,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n\n'], ['\n\n']);
 
-// import UserProfileWithData from '../../components_apollo/UserProfileWithData';
-
 var Profile = _styledComponents2.default.div(_templateObject);
 
 var ProfileComponent = function (_React$Component) {
@@ -63,7 +61,7 @@ var ProfileComponent = function (_React$Component) {
         return {};
       } else {
         return store.getState();
-      }
+      };
     }
   }]);
 
@@ -76,7 +74,6 @@ var ProfileComponent = function (_React$Component) {
   (0, _createClass3.default)(ProfileComponent, [{
     key: 'render',
     value: function render() {
-      console.log('props on Profile: ', this.props);
       var profile = this.props.profile;
 
       return _react2.default.createElement(Profile, { id: 'profile' }, this.props.loggedIn ? _react2.default.createElement('div', null, _react2.default.createElement('div', null, _react2.default.createElement('h1', null, 'ReduxProfile'), _react2.default.createElement('div', null, 'user_id (auth0): ' + profile.user_id), _react2.default.createElement('div', null, 'clientID:' + profile.clientID), _react2.default.createElement('div', null, 'created_at' + profile.created_at), _react2.default.createElement('div', null, 'email: ' + profile.email), _react2.default.createElement('div', null, 'email_verified: ' + profile.email_verified), _react2.default.createElement('div', null, 'graphcoolId: ' + profile.graphcoolId), _react2.default.createElement('div', null, 'name: ' + profile.name), _react2.default.createElement('div', null, 'nickname: ' + profile.nickname)), _react2.default.createElement(_UserProfileWithData2.default, {
@@ -88,17 +85,12 @@ var ProfileComponent = function (_React$Component) {
   return ProfileComponent;
 }(_react2.default.Component);
 
+;
+
 var mapStateToProps = function mapStateToProps(_ref2) {
   var loggedIn = _ref2.loggedIn,
       profile = _ref2.profile;
   return { loggedIn: loggedIn, profile: profile };
 };
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     loginReduxStore: (profile) => dispatch(login(profile)),
-//     logout: () => dispatch(logout())
-//   }
-// };
 
 exports.default = (0, _reactRedux.connect)(mapStateToProps, null)(ProfileComponent);

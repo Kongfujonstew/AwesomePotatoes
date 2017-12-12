@@ -18,7 +18,7 @@ class MovieInfo extends React.Component {
   constructor(props) {
     super(props);
     this.state = {}
-  };
+  }
 
   componentDidMount() {
     let id;

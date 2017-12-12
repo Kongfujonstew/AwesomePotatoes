@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { connect } from 'react-redux';
 import Auth from '../../auth0/auth.js';
-import { initStore, login, logout } from '../../redux/actions';
+import { login, logout } from '../../redux/actions';
 const url = process.env.GRAPHCOOL_URI;
 
 class AuthButton extends React.Component {
@@ -21,23 +21,28 @@ class AuthButton extends React.Component {
     this.auth = new Auth();
     this.lock = this.auth.getLock();
     this.lock.on('authenticated', (data) => {
-      const { accessToken } = data;
-      this.lock.getUserInfo(accessToken, (error, profile) => {
-        this.handleAuth(profile);
-      });
+      this.handleAuth(data);
     });
   }
 
-  async handleAuth(profile) {
-    const graphcoolId = await this.getGraphCoolUserIdIfExists(profile.email) ||
-      await this.createGraphCoolUser(profile);
-
-    if (graphcoolId) {
-      profile.graphcoolId = graphcoolId;
-      this.props.loginReduxStore(profile);
-    };
+  handleAuth(data) {
+    const { accessToken, idToken } = data;
+    window.localStorage.setItem('auth0IdToken', idToken);
+    this.lock.getUserInfo(accessToken, async (error, profile) => {
+      const graphcoolId = await this.getGraphcoolUser(profile);
+      this.loginLocally(profile, graphcoolId);
+    });
   }
 
+  async getGraphcoolUser(profile) {
+    const graphcoolId = await this.getGraphCoolUserIdIfExists(profile.email) ||
+      await this.createGraphCoolUser(profile);
+    return graphcoolId;
+  }
+
+  //Todo: combine following two methods
+  //either use auth0 meta_data to identify first time logins
+  //or improve graphcool updateorcreate to accept auth0UserId
   getGraphCoolUserIdIfExists (email) {
     return axios.post(url, {
       headers: { 'Content-Type': 'application/json' },
@@ -60,13 +65,23 @@ class AuthButton extends React.Component {
 
   createGraphCoolUser(profile) {
     let { email, user_id, name, nickname } = profile;
+    const authProvider = { auth0: {idToken: localStorage.getItem('auth0IdToken')}};
     name = (name === email) ? nickname : name;
-    const options = {variables: { name, email, auth0Id: user_id }};
+    const options = {variables: { name, email, authProvider }};
     return this.props.createUser(options)
       .catch(err => console.log('error update or create new graphcool user:', err))    
       .then(({ data} ) => {
         return data.createUser.id;
       });
+  }
+
+  loginLocally(profile, graphcoolId) {
+    if (graphcoolId) {
+      profile.graphcoolId = graphcoolId;
+      this.props.loginReduxStore(profile);
+    } else {
+      console.log('login err no user found graphcool')
+    };
   }
 
   login() {
@@ -75,6 +90,7 @@ class AuthButton extends React.Component {
 
   logout() {
     this.props.logout();
+    window.localStorage.setItem('auth0IdToken', null);
   }
 
   render () {

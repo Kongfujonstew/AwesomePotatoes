@@ -13,7 +13,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var login = exports.login = function login(profile) {
   return function (dispatch) {
-    console.log('logging in profile: ', profile);
     return dispatch({ type: _actionTypes2.default.LOGIN, profile: profile });
   };
 };
@@ -26,7 +25,6 @@ var logout = exports.logout = function logout() {
 
 var selectMovie = exports.selectMovie = function selectMovie(selectedMovieId) {
   return function (dispatch) {
-    console.log('dispatchign action with movieId: ', selectedMovieId);
     return dispatch({
       type: _actionTypes2.default.SELECT_MOVIE,
       selectedMovieId: selectedMovieId

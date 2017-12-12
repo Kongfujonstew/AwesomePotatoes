@@ -22,6 +22,6 @@ var _AuthButton2 = _interopRequireDefault(_AuthButton);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.default = (0, _redux.compose)((0, _reactApollo.graphql)(_apollo.CreateUserMutation, {
+exports.default = (0, _redux.compose)((0, _reactApollo.graphql)(_apollo.AuthCreateUserMutation, {
   name: 'createUser'
 }))(_AuthButton2.default);

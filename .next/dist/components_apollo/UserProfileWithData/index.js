@@ -49,7 +49,7 @@ var GraphcoolProfile = function (_React$Component) {
         return {};
       } else {
         return store.getState();
-      }
+      };
     }
   }]);
 
@@ -67,16 +67,16 @@ var GraphcoolProfile = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      while (this.props.data.loading) {
+      while (this.props.data.loading || !this.props.data.allUsers) {
         return 'loading';
       };
       var _props$data$allUsers$ = this.props.data.allUsers[0],
-          auth0Id = _props$data$allUsers$.auth0Id,
+          auth0UserId = _props$data$allUsers$.auth0UserId,
           name = _props$data$allUsers$.name,
           email = _props$data$allUsers$.email,
           id = _props$data$allUsers$.id;
 
-      return _react2.default.createElement('div', null, _react2.default.createElement('h1', null, 'GraphcoolProfile'), _react2.default.createElement('div', null, 'auth0Id: ' + auth0Id), _react2.default.createElement('div', null, 'name: ' + name), _react2.default.createElement('div', null, 'email: ' + email), _react2.default.createElement('div', null, 'graphcoolId: ' + id));
+      return _react2.default.createElement('div', null, _react2.default.createElement('h1', null, 'GraphcoolProfile'), _react2.default.createElement('div', null, 'auth0Id: ' + auth0UserId), _react2.default.createElement('div', null, 'name: ' + name), _react2.default.createElement('div', null, 'email: ' + email), _react2.default.createElement('div', null, 'graphcoolId: ' + id));
     }
   }]);
 
@@ -88,7 +88,7 @@ var GraphcoolProfile = function (_React$Component) {
 var DataComponent = (0, _reactApollo.graphql)(_apollo.GetUserByGraphcoolIdQuery, {
   options: function options(_ref2) {
     var graphcoolId = _ref2.graphcoolId;
-    return { variables: { id: graphcoolId } };
+    return { variables: { id: graphcoolId || 'undefined' } };
   }
 })(GraphcoolProfile);
 

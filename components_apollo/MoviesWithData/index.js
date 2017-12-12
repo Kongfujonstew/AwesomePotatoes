@@ -12,12 +12,14 @@ const AllMovies = (props) => {
         return (
           <MovieCard movie={movie} key={movie.id}/>
         )
-      }) : 'null'}
+      }) : 'Loading movie data . . .'}
     </div>
   );
 };
 
-const AllMoviesWithData = graphql(AllMoviesQuery)(AllMovies);
+const AllMoviesWithData = graphql(AllMoviesQuery, {
+  options: { pollInterval: 500}
+})(AllMovies);
 
 export default () => <AllMoviesWithData />
 

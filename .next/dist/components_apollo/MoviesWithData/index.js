@@ -26,10 +26,12 @@ var AllMovies = function AllMovies(props) {
   return _react2.default.createElement('div', { id: 'cards' }, allMovies ? allMovies.map(function (movie) {
     //.length?
     return _react2.default.createElement(_MovieCard2.default, { movie: movie, key: movie.id });
-  }) : 'null');
+  }) : 'Loading movie data . . .');
 };
 
-var AllMoviesWithData = (0, _reactApollo.graphql)(_apollo.AllMoviesQuery)(AllMovies);
+var AllMoviesWithData = (0, _reactApollo.graphql)(_apollo.AllMoviesQuery, {
+  options: { pollInterval: 500 }
+})(AllMovies);
 
 exports.default = function () {
   return _react2.default.createElement(AllMoviesWithData, null);

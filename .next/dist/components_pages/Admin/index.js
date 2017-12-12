@@ -12,10 +12,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _link = require('next/dist/lib/link.js');
-
-var _link2 = _interopRequireDefault(_link);
-
 var _styledComponents = require('styled-components');
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
@@ -31,8 +27,6 @@ var _CreateMovieWithData2 = _interopRequireDefault(_CreateMovieWithData);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n\n'], ['\n\n']);
-// import PageContainer from '../PageContainer';
-
 
 var Admin = _styledComponents2.default.div(_templateObject);
 

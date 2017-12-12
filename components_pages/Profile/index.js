@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import UserProfileWithData from '../../components_apollo/UserProfileWithData'
-// import UserProfileWithData from '../../components_apollo/UserProfileWithData';
 
 const Profile = styled.div`
 
@@ -13,15 +12,14 @@ class ProfileComponent extends React.Component {
       return {}
     } else {
       return store.getState();
-    }
+    };
   }
 
   constructor(props) {
     super(props);
-  };
+  }
 
   render () {
-    console.log('props on Profile: ', this.props)
     const { profile } = this.props;
     return (
       <Profile id="profile">
@@ -38,28 +36,19 @@ class ProfileComponent extends React.Component {
               <div>{'name: ' + profile.name }</div>
               <div>{'nickname: ' + profile.nickname}</div>
             </div>
-            <UserProfileWithData 
+            <UserProfileWithData
               graphcoolId={this.props.profile.graphcoolId}
             />
           </div>:
           'Please log in to view profile'
         }
       </Profile>
-    )
+    );
   }
-
-
-}
+};
 
 
 const mapStateToProps = ({ loggedIn, profile }) => ({ loggedIn, profile });
-
-// const mapDispatchToProps = (dispatch) => {
-//   return {
-//     loginReduxStore: (profile) => dispatch(login(profile)),
-//     logout: () => dispatch(logout())
-//   }
-// };
 
 export default connect(
   mapStateToProps,

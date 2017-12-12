@@ -1,0 +1,33 @@
+﻿type File @model {
+  contentType: String!
+  createdAt: DateTime!
+  id: ID! @isUnique
+  name: String!
+  secret: String! @isUnique
+  size: Int!
+  updatedAt: DateTime!
+  url: String! @isUnique
+}
+
+type Like @model {
+  id: ID! @isUnique
+  movie: Movie @relation(name: "MovieOnLike")
+  user: User! @relation(name: "LikeOnUser")
+}
+
+type Movie @model {
+  description: String!
+  id: ID! @isUnique
+  likes: [Like!]! @relation(name: "MovieOnLike")
+  name: String!
+}
+
+type User @model {
+  auth0Id: String!
+  createdAt: DateTime!
+  email: String! @isUnique
+  id: ID! @isUnique
+  likes: [Like!]! @relation(name: "LikeOnUser")
+  name: String!
+  updatedAt: DateTime!
+}

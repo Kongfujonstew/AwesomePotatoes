@@ -36,8 +36,6 @@ var _apollo = require('../../apollo');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import Card from '../../components/MovieCard';
-
 var CreateMovie = function (_React$Component) {
   (0, _inherits3.default)(CreateMovie, _React$Component);
 
@@ -58,7 +56,7 @@ var CreateMovie = function (_React$Component) {
       }).then(function (_ref) {
         var data = _ref.data;
 
-        console.log('data returned', data);
+        console.log('movie created: ', data);
       }).catch(function (error) {
         console.log('there was an error sending the query', error);
       });
@@ -66,7 +64,7 @@ var CreateMovie = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('div', null, _react2.default.createElement('form', null, _react2.default.createElement('h3', null, 'ADD MOVIE'), _react2.default.createElement('p', null, 'Name'), _react2.default.createElement('input', { type: 'text', id: 'name', ref: 'name' }), _react2.default.createElement('p', null, 'Description'), _react2.default.createElement('input', { type: 'text', id: 'description', ref: 'description' }), _react2.default.createElement('br', null), _react2.default.createElement('button', {
+      return _react2.default.createElement('div', null, _react2.default.createElement('form', null, _react2.default.createElement('h3', null, 'ADD MOVIE'), _react2.default.createElement('div', null, 'You must log in to add movies'), _react2.default.createElement('p', null, 'Name:'), _react2.default.createElement('input', { type: 'text', id: 'name', ref: 'name' }), _react2.default.createElement('p', null, 'Description:'), _react2.default.createElement('input', { type: 'text', id: 'description', ref: 'description' }), _react2.default.createElement('br', null), _react2.default.createElement('button', {
         onClick: this.handleClick.bind(this)
       }, 'Add')));
     }
