@@ -34,6 +34,6 @@ GRAPHCOOL_URI
 
 Fill in these variables with info from auth0 and graphcool
 
-3) To start: 'yarn run dev' for dev work and hot module reload OR 'yarn run build && yarn run start' for production build.
+3) To start: 'yarn run dev' for dev work and hot module reload OR 'yarn run build && yarn next start' for production build.
 
 
