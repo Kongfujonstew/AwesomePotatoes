@@ -41,7 +41,7 @@ var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  query ($email:S
 
 global.fetch = _nodeFetch2.default;
 
-var GRAPHCOOL_URI = process.env.GRAPHCOOL_URI;
+var GRAPHCOOL_URI = process.env.GRAPHCOOL_URI || GRAPHCOOL_URI;
 
 var httpLink = (0, _apolloLinkHttp.createHttpLink)({
   uri: GRAPHCOOL_URI

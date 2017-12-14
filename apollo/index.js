@@ -6,7 +6,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import fetch from 'node-fetch';
 global.fetch = fetch;
 
-const GRAPHCOOL_URI = process.env.GRAPHCOOL_URI;
+const GRAPHCOOL_URI = process.env.GRAPHCOOL_URI || GRAPHCOOL_URI;
 
 const httpLink = createHttpLink({
   uri: GRAPHCOOL_URI,
@@ -26,7 +26,6 @@ export const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache()
 });
-
 
 
 //Queries and Mutations:

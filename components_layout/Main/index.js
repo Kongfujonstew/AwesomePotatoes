@@ -22,13 +22,13 @@ export default ({ children }) => (
     <Layout id="layout">
       <header>
         <nav>{'Public nav: '}
-          <Link prefetch href='/home'><a>Home</a></Link> |
-          <Link prefetch href='/about'><a>About</a></Link> |
-          <Link prefetch href='/contact'><a>Contact</a></Link>
+          <Link href='/home'><a>Home</a></Link> |
+          <Link href='/about'><a>About</a></Link> |
+          <Link href='/contact'><a>Contact</a></Link>
         </nav>
         <nav>{'Admin nav: '}
-          <Link prefetch href='/admin'><a>Admin</a></Link> |
-          <Link prefetch href='/profile'><a>User Profile</a></Link>
+          <Link href='/admin'><a>Admin</a></Link> |
+          <Link href='/profile'><a>User Profile</a></Link>
         </nav>
         <AuthButtonWithData />
       </header>

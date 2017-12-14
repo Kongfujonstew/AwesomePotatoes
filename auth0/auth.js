@@ -1,8 +1,8 @@
 import auth0 from 'auth0-js';
 import Auth0Lock from 'auth0-lock';
 
-const clientID = process.env.AUTH0_CLIENT_ID;
-const domain = process.env.AUTH0_DOMAIN;
+const clientID = process.env.AUTH0_CLIENT_ID || AUTH0_CLIENT_ID;
+const domain = process.env.AUTH0_DOMAIN || AUTH0_DOMAIN;
 
 export default class Auth {
   constructor() {

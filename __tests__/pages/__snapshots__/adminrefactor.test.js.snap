@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-bdVaJa cKRXsU"
+  id="layout"
+>
+  <header>
+    <nav>
+      Public nav: 
+      <a
+        href="/home"
+        onClick={[Function]}
+      >
+        Home
+      </a>
+       |
+      <a
+        href="/about"
+        onClick={[Function]}
+      >
+        About
+      </a>
+       |
+      <a
+        href="/contact"
+        onClick={[Function]}
+      >
+        Contact
+      </a>
+    </nav>
+    <nav>
+      Admin nav: 
+      <a
+        href="/admin"
+        onClick={[Function]}
+      >
+        Admin
+      </a>
+       |
+      <a
+        href="/profile"
+        onClick={[Function]}
+      >
+        User Profile
+      </a>
+    </nav>
+    <div>
+      <div>
+        Please log in.
+         
+        <br />
+        <button
+          onClick={[Function]}
+        >
+          Login
+        </button>
+      </div>
+    </div>
+  </header>
+  <div
+    className="sc-htpNat gPdQJU"
+    id="admin"
+  >
+    <div>
+      <form>
+        <h3>
+          ADD MOVIE
+        </h3>
+        <div>
+          You must log in to add movies
+        </div>
+        <p>
+          Name:
+        </p>
+        <input
+          id="name"
+          type="text"
+        />
+        <p>
+          Description:
+        </p>
+        <input
+          id="description"
+          type="text"
+        />
+        <br />
+        <button
+          onClick={[Function]}
+        >
+          Add
+        </button>
+      </form>
+    </div>
+    <div
+      id="cards"
+    >
+      Loading movie data . . .
+    </div>
+  </div>
+  <footer>
+    Jon Michael Stewart
+  </footer>
+</div>
+`;

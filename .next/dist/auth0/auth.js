@@ -22,8 +22,8 @@ var _auth0Lock2 = _interopRequireDefault(_auth0Lock);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var clientID = process.env.AUTH0_CLIENT_ID;
-var domain = process.env.AUTH0_DOMAIN;
+var clientID = process.env.AUTH0_CLIENT_ID || AUTH0_CLIENT_ID;
+var domain = process.env.AUTH0_DOMAIN || AUTH0_DOMAIN;
 
 var Auth = function () {
   function Auth() {
