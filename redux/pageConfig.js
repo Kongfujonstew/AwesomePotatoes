@@ -2,7 +2,7 @@ import { bindActionCreators } from 'redux';
 import { login, logout, selectMovie } from './actions';
 import initStore from './index';
 
-const mapStateToProps = ({ loggedIn }) => ({ loggedIn });
+const mapStateToProps = (state) => (state);
 
 const mapDispatchToProps = (dispatch) => {
   return {

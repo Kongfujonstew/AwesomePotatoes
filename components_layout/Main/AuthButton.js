@@ -113,7 +113,7 @@ class AuthButton extends React.Component {
   }
 };
 
-const mapStateToProps = ({ loggedIn, profile }) => ({ loggedIn, profile });
+const mapStateToProps = ({ user: { loggedIn, profile } }) => ({ loggedIn, profile });
 
 const mapDispatchToProps = (dispatch) => {
   return {

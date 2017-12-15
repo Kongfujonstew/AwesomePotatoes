@@ -48,16 +48,16 @@ var _Contact2 = _interopRequireDefault(_Contact);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Contact = function (_React$Component) {
-  (0, _inherits3.default)(Contact, _React$Component);
+var ContactPage = function (_React$Component) {
+  (0, _inherits3.default)(ContactPage, _React$Component);
 
-  function Contact(props) {
-    (0, _classCallCheck3.default)(this, Contact);
+  function ContactPage(props) {
+    (0, _classCallCheck3.default)(this, ContactPage);
 
-    return (0, _possibleConstructorReturn3.default)(this, (Contact.__proto__ || (0, _getPrototypeOf2.default)(Contact)).call(this, props));
+    return (0, _possibleConstructorReturn3.default)(this, (ContactPage.__proto__ || (0, _getPrototypeOf2.default)(ContactPage)).call(this, props));
   }
 
-  (0, _createClass3.default)(Contact, [{
+  (0, _createClass3.default)(ContactPage, [{
     key: 'render',
     value: function render() {
       return _react2.default.createElement(_Main2.default, null, _react2.default.createElement(_Contact2.default, null));
@@ -78,9 +78,9 @@ var Contact = function (_React$Component) {
     }
   }]);
 
-  return Contact;
+  return ContactPage;
 }(_react2.default.Component);
 
 ;
 
-exports.default = (0, _nextReduxWrapper2.default)(_pageConfig2.default)(Contact);
+exports.default = (0, _nextReduxWrapper2.default)(_pageConfig2.default)(ContactPage);

@@ -249,8 +249,9 @@ var AuthButton = function (_React$Component) {
 ;
 
 var mapStateToProps = function mapStateToProps(_ref6) {
-  var loggedIn = _ref6.loggedIn,
-      profile = _ref6.profile;
+  var _ref6$user = _ref6.user,
+      loggedIn = _ref6$user.loggedIn,
+      profile = _ref6$user.profile;
   return { loggedIn: loggedIn, profile: profile };
 };
 

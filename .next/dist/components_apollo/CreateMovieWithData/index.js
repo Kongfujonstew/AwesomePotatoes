@@ -32,7 +32,15 @@ var _reactDom = require('react-dom');
 
 var _reactApollo = require('react-apollo');
 
+var _recompose = require('recompose');
+
+var _reactRedux = require('react-redux');
+
 var _apollo = require('../../apollo');
+
+var _CreateMovieComponent = require('./CreateMovieComponent');
+
+var _CreateMovieComponent2 = _interopRequireDefault(_CreateMovieComponent);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -49,8 +57,10 @@ var CreateMovie = function (_React$Component) {
     key: 'handleClick',
     value: function handleClick(e) {
       e.preventDefault();
-      var name = this.refs.name.value;
-      var description = this.refs.description.value;
+      var _props$form$createMov = this.props.form.createMovie.values,
+          name = _props$form$createMov.name,
+          description = _props$form$createMov.description;
+
       this.props.mutate({
         variables: { name: name, description: description }
       }).then(function (_ref) {
@@ -64,9 +74,9 @@ var CreateMovie = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      return _react2.default.createElement('div', null, _react2.default.createElement('form', null, _react2.default.createElement('h3', null, 'ADD MOVIE'), _react2.default.createElement('div', null, 'You must log in to add movies'), _react2.default.createElement('p', null, 'Name:'), _react2.default.createElement('input', { type: 'text', id: 'name', ref: 'name' }), _react2.default.createElement('p', null, 'Description:'), _react2.default.createElement('input', { type: 'text', id: 'description', ref: 'description' }), _react2.default.createElement('br', null), _react2.default.createElement('button', {
-        onClick: this.handleClick.bind(this)
-      }, 'Add')));
+      return _react2.default.createElement(_CreateMovieComponent2.default, {
+        handleClick: this.handleClick.bind(this)
+      });
     }
   }]);
 
@@ -75,8 +85,9 @@ var CreateMovie = function (_React$Component) {
 
 ;
 
-var CreateMovieWithData = (0, _reactApollo.graphql)(_apollo.CreateMovieMutation)(CreateMovie);
-
-exports.default = function () {
-  return _react2.default.createElement(CreateMovieWithData, null);
+var mapStateToProps = function mapStateToProps(_ref2) {
+  var form = _ref2.form;
+  return { form: form };
 };
+
+exports.default = (0, _recompose.compose)((0, _reactRedux.connect)(mapStateToProps), (0, _reactApollo.graphql)(_apollo.CreateMovieMutation))(CreateMovie);

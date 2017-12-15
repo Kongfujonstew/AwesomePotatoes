@@ -48,16 +48,16 @@ var _Index2 = _interopRequireDefault(_Index);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Index = function (_React$Component) {
-  (0, _inherits3.default)(Index, _React$Component);
+var IndexPage = function (_React$Component) {
+  (0, _inherits3.default)(IndexPage, _React$Component);
 
-  function Index(props) {
-    (0, _classCallCheck3.default)(this, Index);
+  function IndexPage(props) {
+    (0, _classCallCheck3.default)(this, IndexPage);
 
-    return (0, _possibleConstructorReturn3.default)(this, (Index.__proto__ || (0, _getPrototypeOf2.default)(Index)).call(this, props));
+    return (0, _possibleConstructorReturn3.default)(this, (IndexPage.__proto__ || (0, _getPrototypeOf2.default)(IndexPage)).call(this, props));
   }
 
-  (0, _createClass3.default)(Index, [{
+  (0, _createClass3.default)(IndexPage, [{
     key: 'render',
     value: function render() {
       return _react2.default.createElement('div', { id: 'container' }, _react2.default.createElement(_Main2.default, null, _react2.default.createElement(_Index2.default, null)));
@@ -78,9 +78,9 @@ var Index = function (_React$Component) {
     }
   }]);
 
-  return Index;
+  return IndexPage;
 }(_react2.default.Component);
 
 ;
 
-exports.default = (0, _nextReduxWrapper2.default)(_pageConfig2.default)(Index);
+exports.default = (0, _nextReduxWrapper2.default)(_pageConfig2.default)(IndexPage);

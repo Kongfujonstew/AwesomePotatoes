@@ -14,9 +14,8 @@ var _index2 = _interopRequireDefault(_index);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var mapStateToProps = function mapStateToProps(_ref) {
-  var loggedIn = _ref.loggedIn;
-  return { loggedIn: loggedIn };
+var mapStateToProps = function mapStateToProps(state) {
+  return state;
 };
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {

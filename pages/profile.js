@@ -5,7 +5,7 @@ import pageConfig from '../redux/pageConfig';
 import Layout from '../components_layout/Main';
 import ProfileComponent from '../components_pages/Profile';
 
-class Profile extends React.Component {
+class ProfilePage extends React.Component {
   constructor(props) {
     super(props);
   };
@@ -27,4 +27,4 @@ class Profile extends React.Component {
   };
 };
 
-export default withRedux(pageConfig)(Profile);
+export default withRedux(pageConfig)(ProfilePage);

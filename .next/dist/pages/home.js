@@ -48,16 +48,16 @@ var _Home2 = _interopRequireDefault(_Home);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Home = function (_React$Component) {
-  (0, _inherits3.default)(Home, _React$Component);
+var HomePage = function (_React$Component) {
+  (0, _inherits3.default)(HomePage, _React$Component);
 
-  function Home(props) {
-    (0, _classCallCheck3.default)(this, Home);
+  function HomePage(props) {
+    (0, _classCallCheck3.default)(this, HomePage);
 
-    return (0, _possibleConstructorReturn3.default)(this, (Home.__proto__ || (0, _getPrototypeOf2.default)(Home)).call(this, props));
+    return (0, _possibleConstructorReturn3.default)(this, (HomePage.__proto__ || (0, _getPrototypeOf2.default)(HomePage)).call(this, props));
   }
 
-  (0, _createClass3.default)(Home, [{
+  (0, _createClass3.default)(HomePage, [{
     key: 'render',
     value: function render() {
       return _react2.default.createElement(_Main2.default, null, _react2.default.createElement(_Home2.default, null));
@@ -78,9 +78,9 @@ var Home = function (_React$Component) {
     }
   }]);
 
-  return Home;
+  return HomePage;
 }(_react2.default.Component);
 
 ;
 
-exports.default = (0, _nextReduxWrapper2.default)(_pageConfig2.default)(Home);
+exports.default = (0, _nextReduxWrapper2.default)(_pageConfig2.default)(HomePage);

@@ -48,16 +48,16 @@ var _Movie2 = _interopRequireDefault(_Movie);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Movie = function (_React$Component) {
-  (0, _inherits3.default)(Movie, _React$Component);
+var MoviePage = function (_React$Component) {
+  (0, _inherits3.default)(MoviePage, _React$Component);
 
-  function Movie(props) {
-    (0, _classCallCheck3.default)(this, Movie);
+  function MoviePage(props) {
+    (0, _classCallCheck3.default)(this, MoviePage);
 
-    return (0, _possibleConstructorReturn3.default)(this, (Movie.__proto__ || (0, _getPrototypeOf2.default)(Movie)).call(this, props));
+    return (0, _possibleConstructorReturn3.default)(this, (MoviePage.__proto__ || (0, _getPrototypeOf2.default)(MoviePage)).call(this, props));
   }
 
-  (0, _createClass3.default)(Movie, [{
+  (0, _createClass3.default)(MoviePage, [{
     key: 'render',
     value: function render() {
       return _react2.default.createElement(_Main2.default, null, _react2.default.createElement(_Movie2.default, null));
@@ -78,9 +78,9 @@ var Movie = function (_React$Component) {
     }
   }]);
 
-  return Movie;
+  return MoviePage;
 }(_react2.default.Component);
 
 ;
 
-exports.default = (0, _nextReduxWrapper2.default)(_pageConfig2.default)(Movie);
+exports.default = (0, _nextReduxWrapper2.default)(_pageConfig2.default)(MoviePage);

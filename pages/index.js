@@ -5,7 +5,7 @@ import pageConfig from '../redux/pageConfig';
 import Layout from '../components_layout/Main';
 import IndexComponent from '../components_pages/Index';
 
-class Index extends React.Component {
+class IndexPage extends React.Component {
   constructor(props) {
     super(props);
   };
@@ -29,4 +29,4 @@ class Index extends React.Component {
   };
 };
 
-export default withRedux(pageConfig)(Index);
+export default withRedux(pageConfig)(IndexPage);

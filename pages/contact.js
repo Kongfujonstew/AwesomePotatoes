@@ -5,7 +5,7 @@ import pageConfig from '../redux/pageConfig';
 import Layout from '../components_layout/Main';
 import ContactComponent from '../components_pages/Contact';
 
-class Contact extends React.Component {
+class ContactPage extends React.Component {
   constructor(props) {
     super(props);
   };
@@ -27,4 +27,4 @@ class Contact extends React.Component {
   };
 };
 
-export default withRedux(pageConfig)(Contact);
+export default withRedux(pageConfig)(ContactPage);

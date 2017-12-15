@@ -5,7 +5,7 @@ import pageConfig from '../redux/pageConfig';
 import Layout from '../components_layout/Main';
 import HomeComponent from '../components_pages/Home';
 
-class Home extends React.Component {
+class HomePage extends React.Component {
   constructor(props) {
     super(props);
   };
@@ -27,4 +27,4 @@ class Home extends React.Component {
   };
 };
 
-export default withRedux(pageConfig)(Home);
+export default withRedux(pageConfig)(HomePage);

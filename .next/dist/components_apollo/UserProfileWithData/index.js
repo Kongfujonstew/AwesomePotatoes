@@ -34,6 +34,10 @@ var _reactApollo = require('react-apollo');
 
 var _apollo = require('../../apollo');
 
+var _ProfileComponent = require('./ProfileComponent');
+
+var _ProfileComponent2 = _interopRequireDefault(_ProfileComponent);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var GraphcoolProfile = function (_React$Component) {
@@ -70,13 +74,10 @@ var GraphcoolProfile = function (_React$Component) {
       while (this.props.data.loading || !this.props.data.allUsers) {
         return 'loading';
       };
-      var _props$data$allUsers$ = this.props.data.allUsers[0],
-          auth0UserId = _props$data$allUsers$.auth0UserId,
-          name = _props$data$allUsers$.name,
-          email = _props$data$allUsers$.email,
-          id = _props$data$allUsers$.id;
-
-      return _react2.default.createElement('div', null, _react2.default.createElement('h1', null, 'GraphcoolProfile'), _react2.default.createElement('div', null, 'auth0Id: ' + auth0UserId), _react2.default.createElement('div', null, 'name: ' + name), _react2.default.createElement('div', null, 'email: ' + email), _react2.default.createElement('div', null, 'graphcoolId: ' + id));
+      var user = this.props.data.allUsers[0];
+      return _react2.default.createElement(_ProfileComponent2.default, {
+        user: user
+      });
     }
   }]);
 

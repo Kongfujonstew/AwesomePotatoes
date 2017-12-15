@@ -1,7 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { graphql } from 'react-apollo';
+import { compose } from 'recompose';
+import { connect } from 'react-redux';
 import { CreateMovieMutation } from '../../apollo';
+import CreateMovieComponent from './CreateMovieComponent';
 
 class CreateMovie extends React.Component {
   constructor(props) {
@@ -9,9 +12,8 @@ class CreateMovie extends React.Component {
   }
 
   handleClick(e) {
-    e.preventDefault()
-    const name = this.refs.name.value;
-    const description = this.refs.description.value;
+    e.preventDefault();
+    const { name, description } = this.props.form.createMovie.values;
     this.props.mutate({
       variables: { name, description }
     })
@@ -22,27 +24,18 @@ class CreateMovie extends React.Component {
       });
   }
 
-  render () {
+  render() {
     return (
-      <div>
-        <form>
-          <h3>ADD MOVIE</h3>
-          <div>You must log in to add movies</div>
-          <p>Name:</p>
-          <input type="text" id="name" ref="name"/>
-          <p>Description:</p>
-          <input type="text" id="description" ref="description"/><br/>
-          <button
-            onClick={this.handleClick.bind(this)}
-          >Add</button>
-        </form>
-      </div>
+      <CreateMovieComponent 
+        handleClick={this.handleClick.bind(this)}
+      />
     );
   }
 };
 
-const CreateMovieWithData = graphql(CreateMovieMutation)
-(CreateMovie);
+const mapStateToProps = ({ form }) => ({ form });
 
-export default () => <CreateMovieWithData />
-
+export default compose(
+  connect(mapStateToProps),
+  graphql(CreateMovieMutation)
+)(CreateMovie);

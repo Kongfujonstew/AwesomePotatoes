@@ -5,7 +5,7 @@ import pageConfig from '../redux/pageConfig';
 import Layout from '../components_layout/Main';
 import MovieComponent from '../components_pages/Movie';
 
-class Movie extends React.Component {
+class MoviePage extends React.Component {
   constructor(props) {
     super(props);
   };
@@ -27,4 +27,4 @@ class Movie extends React.Component {
   };
 };
 
-export default withRedux(pageConfig)(Movie);
+export default withRedux(pageConfig)(MoviePage);

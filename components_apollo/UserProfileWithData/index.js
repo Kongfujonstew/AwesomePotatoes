@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { graphql } from 'react-apollo';
 import { GetUserByGraphcoolIdQuery } from '../../apollo';
+import ProfileComponent from './ProfileComponent';
 
 class GraphcoolProfile extends React.Component {
   static getInitialProps ({ store, isServer }) {
@@ -24,15 +25,11 @@ class GraphcoolProfile extends React.Component {
     while (this.props.data.loading || !this.props.data.allUsers) {
       return 'loading';
     };
-    const { auth0UserId, name, email, id } = this.props.data.allUsers[0];
+    const user = this.props.data.allUsers[0];
     return (
-      <div>
-        <h1>GraphcoolProfile</h1>
-        <div>{'auth0Id: ' + auth0UserId }</div>
-        <div>{'name: ' + name }</div>
-        <div>{'email: ' + email }</div>
-        <div>{'graphcoolId: ' + id }</div>
-      </div>
+      <ProfileComponent 
+        user={user}
+      />
     );
   }
 };

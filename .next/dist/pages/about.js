@@ -48,16 +48,16 @@ var _About2 = _interopRequireDefault(_About);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var About = function (_React$Component) {
-  (0, _inherits3.default)(About, _React$Component);
+var AboutPage = function (_React$Component) {
+  (0, _inherits3.default)(AboutPage, _React$Component);
 
-  function About(props) {
-    (0, _classCallCheck3.default)(this, About);
+  function AboutPage(props) {
+    (0, _classCallCheck3.default)(this, AboutPage);
 
-    return (0, _possibleConstructorReturn3.default)(this, (About.__proto__ || (0, _getPrototypeOf2.default)(About)).call(this, props));
+    return (0, _possibleConstructorReturn3.default)(this, (AboutPage.__proto__ || (0, _getPrototypeOf2.default)(AboutPage)).call(this, props));
   }
 
-  (0, _createClass3.default)(About, [{
+  (0, _createClass3.default)(AboutPage, [{
     key: 'render',
     value: function render() {
       return _react2.default.createElement(_Main2.default, null, _react2.default.createElement(_About2.default, null));
@@ -78,9 +78,9 @@ var About = function (_React$Component) {
     }
   }]);
 
-  return About;
+  return AboutPage;
 }(_react2.default.Component);
 
 ;
 
-exports.default = (0, _nextReduxWrapper2.default)(_pageConfig2.default)(About);
+exports.default = (0, _nextReduxWrapper2.default)(_pageConfig2.default)(AboutPage);

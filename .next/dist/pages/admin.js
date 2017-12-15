@@ -48,16 +48,16 @@ var _Admin2 = _interopRequireDefault(_Admin);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Admin = function (_React$Component) {
-  (0, _inherits3.default)(Admin, _React$Component);
+var AdminPage = function (_React$Component) {
+  (0, _inherits3.default)(AdminPage, _React$Component);
 
-  function Admin(props) {
-    (0, _classCallCheck3.default)(this, Admin);
+  function AdminPage(props) {
+    (0, _classCallCheck3.default)(this, AdminPage);
 
-    return (0, _possibleConstructorReturn3.default)(this, (Admin.__proto__ || (0, _getPrototypeOf2.default)(Admin)).call(this, props));
+    return (0, _possibleConstructorReturn3.default)(this, (AdminPage.__proto__ || (0, _getPrototypeOf2.default)(AdminPage)).call(this, props));
   }
 
-  (0, _createClass3.default)(Admin, [{
+  (0, _createClass3.default)(AdminPage, [{
     key: 'render',
     value: function render() {
       return _react2.default.createElement(_Main2.default, null, _react2.default.createElement(_Admin2.default, null));
@@ -78,9 +78,9 @@ var Admin = function (_React$Component) {
     }
   }]);
 
-  return Admin;
+  return AdminPage;
 }(_react2.default.Component);
 
 ;
 
-exports.default = (0, _nextReduxWrapper2.default)(_pageConfig2.default)(Admin);
+exports.default = (0, _nextReduxWrapper2.default)(_pageConfig2.default)(AdminPage);

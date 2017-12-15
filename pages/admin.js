@@ -5,7 +5,7 @@ import pageConfig from '../redux/pageConfig';
 import Layout from '../components_layout/Main';
 import AdminComponent from '../components_pages/Admin';
 
-class Admin extends React.Component {
+class AdminPage extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -27,4 +27,4 @@ class Admin extends React.Component {
   };
 };
 
-export default withRedux(pageConfig)(Admin);
+export default withRedux(pageConfig)(AdminPage);

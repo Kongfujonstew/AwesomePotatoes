@@ -48,16 +48,16 @@ var _Profile2 = _interopRequireDefault(_Profile);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Profile = function (_React$Component) {
-  (0, _inherits3.default)(Profile, _React$Component);
+var ProfilePage = function (_React$Component) {
+  (0, _inherits3.default)(ProfilePage, _React$Component);
 
-  function Profile(props) {
-    (0, _classCallCheck3.default)(this, Profile);
+  function ProfilePage(props) {
+    (0, _classCallCheck3.default)(this, ProfilePage);
 
-    return (0, _possibleConstructorReturn3.default)(this, (Profile.__proto__ || (0, _getPrototypeOf2.default)(Profile)).call(this, props));
+    return (0, _possibleConstructorReturn3.default)(this, (ProfilePage.__proto__ || (0, _getPrototypeOf2.default)(ProfilePage)).call(this, props));
   }
 
-  (0, _createClass3.default)(Profile, [{
+  (0, _createClass3.default)(ProfilePage, [{
     key: 'render',
     value: function render() {
       return _react2.default.createElement(_Main2.default, null, _react2.default.createElement(_Profile2.default, null));
@@ -78,9 +78,9 @@ var Profile = function (_React$Component) {
     }
   }]);
 
-  return Profile;
+  return ProfilePage;
 }(_react2.default.Component);
 
 ;
 
-exports.default = (0, _nextReduxWrapper2.default)(_pageConfig2.default)(Profile);
+exports.default = (0, _nextReduxWrapper2.default)(_pageConfig2.default)(ProfilePage);
