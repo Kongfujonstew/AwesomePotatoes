@@ -19,8 +19,6 @@ var _styledComponents2 = _interopRequireDefault(_styledComponents);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n'], ['\n']);
-// import { render } from 'react-dom';
-
 
 var ProfileStyles = _styledComponents2.default.div(_templateObject);
 

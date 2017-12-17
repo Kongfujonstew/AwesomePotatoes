@@ -20,6 +20,14 @@ var _styledComponents = require('styled-components');
 
 var _styledComponents2 = _interopRequireDefault(_styledComponents);
 
+var _MuiThemeProvider = require('material-ui/styles/MuiThemeProvider');
+
+var _MuiThemeProvider2 = _interopRequireDefault(_MuiThemeProvider);
+
+var _RaisedButton = require('material-ui/RaisedButton');
+
+var _RaisedButton2 = _interopRequireDefault(_RaisedButton);
+
 var _reduxForm = require('redux-form');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -30,7 +38,7 @@ var CreateMovieComponentStyles = _styledComponents2.default.div(_templateObject)
 
 var CreateMovieComponentForm = function CreateMovieComponentForm(_ref) {
   var handleClick = _ref.handleClick;
-  return _react2.default.createElement(CreateMovieComponentStyles, null, _react2.default.createElement('form', { onSubmit: handleClick }, _react2.default.createElement('h3', null, 'ADD MOVIE'), _react2.default.createElement('div', null, 'You must log in to add movies'), _react2.default.createElement('div', null, _react2.default.createElement('label', { htmlFor: 'movieName' }, 'Movie Name: '), _react2.default.createElement(_reduxForm.Field, { name: 'name', component: 'input', type: 'text' })), _react2.default.createElement('div', null, _react2.default.createElement('label', { htmlFor: 'movieDescription' }, 'Description:'), _react2.default.createElement(_reduxForm.Field, { name: 'description', component: 'input', type: 'text' })), _react2.default.createElement('button', { type: 'submit' }, 'Submit')));
+  return _react2.default.createElement(CreateMovieComponentStyles, null, _react2.default.createElement('form', { onSubmit: handleClick }, _react2.default.createElement('h3', null, 'ADD MOVIE'), _react2.default.createElement('div', null, 'You must log in to add movies'), _react2.default.createElement('div', null, _react2.default.createElement('label', { htmlFor: 'movieName' }, 'Movie Name: '), _react2.default.createElement(_reduxForm.Field, { name: 'name', component: 'input', type: 'text' })), _react2.default.createElement('div', null, _react2.default.createElement('label', { htmlFor: 'movieDescription' }, 'Description:'), _react2.default.createElement(_reduxForm.Field, { name: 'description', component: 'input', type: 'text' })), _react2.default.createElement(_MuiThemeProvider2.default, null, _react2.default.createElement(_RaisedButton2.default, { label: 'Add Movie', onClick: handleClick }))));
 };
 
 exports.default = (0, _reduxForm.reduxForm)({

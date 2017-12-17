@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import styled from 'styled-components';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import RaisedButton from 'material-ui/RaisedButton';
 import { Field, reduxForm } from 'redux-form';
 
 const CreateMovieComponentStyles = styled.div`
@@ -28,7 +30,9 @@ const CreateMovieComponentForm = ({ handleClick }) => (
         <label htmlFor="movieDescription">Description:</label>
         <Field name="description" component="input" type="text" />
       </div>
-      <button type="submit">Submit</button>
+      <MuiThemeProvider>
+        <RaisedButton label="Add Movie" onClick={handleClick} />
+      </MuiThemeProvider>
     </form>
   </CreateMovieComponentStyles>
 );
@@ -36,3 +40,4 @@ const CreateMovieComponentForm = ({ handleClick }) => (
 export default reduxForm({
   form: 'createMovie'
 })(CreateMovieComponentForm);
+

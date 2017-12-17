@@ -1,18 +1,10 @@
+import React from 'react';
 import axios from 'axios';
-import { connect } from 'react-redux';
 import Auth from '../../auth0/auth.js';
 import { login, logout } from '../../redux/actions';
 const url = process.env.GRAPHCOOL_URI;
 
-class AuthButton extends React.Component {
-  static getInitialProps ({ store, isServer }) {
-    if (isServer) {
-      return {};
-    } else {
-      return store.getState();
-    }
-  }
-
+class Container extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -28,8 +20,8 @@ class AuthButton extends React.Component {
   handleAuth(data) {
     const { accessToken, idToken } = data;
     window.localStorage.setItem('auth0IdToken', idToken);
-    this.lock.getUserInfo(accessToken, async (error, profile) => {
-      const graphcoolId = await this.getGraphcoolUser(profile);
+    this.lock.getUserInfo(accessToken, (error, profile) => {
+      const graphcoolId = this.getGraphcoolUser(profile);
       this.loginLocally(profile, graphcoolId);
     });
   }
@@ -80,7 +72,7 @@ class AuthButton extends React.Component {
       profile.graphcoolId = graphcoolId;
       this.props.loginReduxStore(profile);
     } else {
-      console.log('login err no user found graphcool')
+      console.log('login err no user found graphcool');
     };
   }
 
@@ -89,42 +81,22 @@ class AuthButton extends React.Component {
   }
 
   logout() {
-    this.props.logout();
+    this.props.logoutReduxStore();
     window.localStorage.setItem('auth0IdToken', null);
   }
 
-  render () {
-    const { loggedIn, profile } = this.props;
-    const loginButton = loggedIn ? 
-      <div>
-        {'Logged in with: ' + profile.name} <br/>
-        <button onClick={this.logout.bind(this)}>Logout</button>
-      </div>:
-      <div>
-        {'Please log in.'} <br/>
-        <button onClick={this.login.bind(this)}>Login</button>
-      </div>
-      
-    return (
-      <div>
-        { loginButton }
-      </div>
-    );
+  render() {
+    const { Component } = this.props;
+    const componentProps = {
+      loggedIn: this.props.loggedIn,
+      profile: this.props.profile,
+      login: this.login.bind(this),
+      logout: this.logout.bind(this)
+    };
+
+    return Component(componentProps);
   }
 };
 
-const mapStateToProps = ({ user: { loggedIn, profile } }) => ({ loggedIn, profile });
+export default Container;
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    loginReduxStore: (profile) => dispatch(login(profile)),
-    logout: () => dispatch(logout())
-  }
-};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(AuthButton);
-      
-      

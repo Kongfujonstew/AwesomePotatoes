@@ -4,7 +4,7 @@ import { graphql } from 'react-apollo';
 import { compose } from 'recompose';
 import { connect } from 'react-redux';
 import { CreateMovieMutation } from '../../apollo';
-import CreateMovieComponent from './CreateMovieComponent';
+import Component from './Component';
 
 class CreateMovie extends React.Component {
   constructor(props) {
@@ -26,7 +26,7 @@ class CreateMovie extends React.Component {
 
   render() {
     return (
-      <CreateMovieComponent 
+      <Component 
         handleClick={this.handleClick.bind(this)}
       />
     );

@@ -38,9 +38,9 @@ var _reactRedux = require('react-redux');
 
 var _apollo = require('../../apollo');
 
-var _CreateMovieComponent = require('./CreateMovieComponent');
+var _Component = require('./Component');
 
-var _CreateMovieComponent2 = _interopRequireDefault(_CreateMovieComponent);
+var _Component2 = _interopRequireDefault(_Component);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -74,7 +74,7 @@ var CreateMovie = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      return _react2.default.createElement(_CreateMovieComponent2.default, {
+      return _react2.default.createElement(_Component2.default, {
         handleClick: this.handleClick.bind(this)
       });
     }
