@@ -6,7 +6,9 @@ import ReduxProfile from '../../components/ReduxProfile';
 const ProfileStyled = styled.div`
 `;
 
-const ProfileComponent = ({ loggedIn, profile}) => (
+const ProfileComponent = ({ loggedIn, profile}) => {
+  console.log('profile: ', profile)
+  return(
   <ProfileStyled>
     { loggedIn ?
       <div>
@@ -21,6 +23,7 @@ const ProfileComponent = ({ loggedIn, profile}) => (
     }
   </ProfileStyled>
 );
+}
 
 const mapStateToProps = ({ user: { loggedIn, profile }}) => ({ loggedIn, profile });
 

@@ -20,8 +20,8 @@ class Container extends React.Component {
   handleAuth(data) {
     const { accessToken, idToken } = data;
     window.localStorage.setItem('auth0IdToken', idToken);
-    this.lock.getUserInfo(accessToken, (error, profile) => {
-      const graphcoolId = this.getGraphcoolUser(profile);
+    this.lock.getUserInfo(accessToken, async (error, profile) => {
+      const graphcoolId = await this.getGraphcoolUser(profile);
       this.loginLocally(profile, graphcoolId);
     });
   }

@@ -35,6 +35,8 @@ var ProfileStyled = _styledComponents2.default.div(_templateObject);
 var ProfileComponent = function ProfileComponent(_ref) {
   var loggedIn = _ref.loggedIn,
       profile = _ref.profile;
+
+  console.log('profile: ', profile);
   return _react2.default.createElement(ProfileStyled, null, loggedIn ? _react2.default.createElement('div', null, _react2.default.createElement(_ReduxProfile2.default, {
     profile: profile
   }), _react2.default.createElement(_UserProfileWithData2.default, {

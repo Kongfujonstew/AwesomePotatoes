@@ -79,51 +79,74 @@ var Container = function (_React$Component) {
           idToken = data.idToken;
 
       window.localStorage.setItem('auth0IdToken', idToken);
-      this.lock.getUserInfo(accessToken, function (error, profile) {
-        var graphcoolId = _this3.getGraphcoolUser(profile);
-        _this3.loginLocally(profile, graphcoolId);
-      });
+      this.lock.getUserInfo(accessToken, function () {
+        var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee(error, profile) {
+          var graphcoolId;
+          return _regenerator2.default.wrap(function _callee$(_context) {
+            while (1) {
+              switch (_context.prev = _context.next) {
+                case 0:
+                  _context.next = 2;
+                  return _this3.getGraphcoolUser(profile);
+
+                case 2:
+                  graphcoolId = _context.sent;
+
+                  _this3.loginLocally(profile, graphcoolId);
+
+                case 4:
+                case 'end':
+                  return _context.stop();
+              }
+            }
+          }, _callee, _this3);
+        }));
+
+        return function (_x, _x2) {
+          return _ref.apply(this, arguments);
+        };
+      }());
     }
   }, {
     key: 'getGraphcoolUser',
     value: function () {
-      var _ref = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee(profile) {
+      var _ref2 = (0, _asyncToGenerator3.default)( /*#__PURE__*/_regenerator2.default.mark(function _callee2(profile) {
         var graphcoolId;
-        return _regenerator2.default.wrap(function _callee$(_context) {
+        return _regenerator2.default.wrap(function _callee2$(_context2) {
           while (1) {
-            switch (_context.prev = _context.next) {
+            switch (_context2.prev = _context2.next) {
               case 0:
-                _context.next = 2;
+                _context2.next = 2;
                 return this.getGraphCoolUserIdIfExists(profile.email);
 
               case 2:
-                _context.t0 = _context.sent;
+                _context2.t0 = _context2.sent;
 
-                if (_context.t0) {
-                  _context.next = 7;
+                if (_context2.t0) {
+                  _context2.next = 7;
                   break;
                 }
 
-                _context.next = 6;
+                _context2.next = 6;
                 return this.createGraphCoolUser(profile);
 
               case 6:
-                _context.t0 = _context.sent;
+                _context2.t0 = _context2.sent;
 
               case 7:
-                graphcoolId = _context.t0;
-                return _context.abrupt('return', graphcoolId);
+                graphcoolId = _context2.t0;
+                return _context2.abrupt('return', graphcoolId);
 
               case 9:
               case 'end':
-                return _context.stop();
+                return _context2.stop();
             }
           }
-        }, _callee, this);
+        }, _callee2, this);
       }));
 
-      function getGraphcoolUser(_x) {
-        return _ref.apply(this, arguments);
+      function getGraphcoolUser(_x3) {
+        return _ref2.apply(this, arguments);
       }
 
       return getGraphcoolUser;
@@ -141,8 +164,8 @@ var Container = function (_React$Component) {
         query: 'query {\n        allUsers (filter: {email:"' + email + '"}) {\n          id\n        }\n      }\n    '
       }).catch(function (err) {
         return console.log('err retrieving graphcool user: ', err);
-      }).then(function (_ref2) {
-        var data = _ref2.data;
+      }).then(function (_ref3) {
+        var data = _ref3.data;
 
         if (data.data.allUsers && data.data.allUsers.length) {
           return data.data.allUsers[0].id;
@@ -164,8 +187,8 @@ var Container = function (_React$Component) {
       var options = { variables: { name: name, email: email, authProvider: authProvider } };
       return this.props.createUser(options).catch(function (err) {
         return console.log('error update or create new graphcool user:', err);
-      }).then(function (_ref3) {
-        var data = _ref3.data;
+      }).then(function (_ref4) {
+        var data = _ref4.data;
 
         return data.createUser.id;
       });
