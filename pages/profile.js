@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from 'react-dom';
 import withRedux from 'next-redux-wrapper';
 import pageConfig from '../redux/pageConfig';
 import Layout from '../components_layout/Main';
@@ -8,15 +7,15 @@ import ProfileComponent from '../components_pages/Profile';
 class ProfilePage extends React.Component {
   constructor(props) {
     super(props);
-  };
+  }
 
-  static getInitialProps ({ store, isServer, pathname, query }) {
+  static getInitialProps ({ store, isServer/*, pathname, query*/}) {
     if (isServer) {
-      return {}
+      return {};
     } else {
       return store.getState();
     }
-  };
+  }
 
   render () {
     return (
@@ -24,7 +23,7 @@ class ProfilePage extends React.Component {
         <ProfileComponent />
       </Layout>
     );
-  };
-};
+  }
+}
 
 export default withRedux(pageConfig)(ProfilePage);

@@ -1,3 +1,4 @@
+/*global process:true*/
 import gql from 'graphql-tag';
 import { ApolloClient } from 'apollo-client';
 import { createHttpLink } from 'apollo-link-http';
@@ -19,7 +20,7 @@ const authLink = setContext((_, { headers }) => {
       ...headers,
       authorization: token ? `Bearer ${token}` : null,
     }
-  }
+  };
 });
 
 export const client = new ApolloClient({
@@ -35,7 +36,7 @@ export const GetUserByEmailQuery = gql`
       id
     }
   }
-`
+`;
 
 export const GetUserByGraphcoolIdQuery = gql`
   query ($id:ID!) {
@@ -46,7 +47,7 @@ export const GetUserByGraphcoolIdQuery = gql`
       email
     }
   }
-`
+`;
 
 export const GetMovieByGraphcoolIdQuery = gql`
   query ($id:ID!) {
@@ -59,7 +60,7 @@ export const GetMovieByGraphcoolIdQuery = gql`
       description
     }
   }
-`
+`;
 
 export const AllMoviesQuery = gql`
   query {
@@ -72,7 +73,7 @@ export const AllMoviesQuery = gql`
       description
     }
   }
-`
+`;
 
 export const CreateUserMutation = gql`
   mutation ($auth0Id:String! $email:String! $name:String!) {
@@ -80,7 +81,7 @@ export const CreateUserMutation = gql`
       id
     }
   }
-`
+`;
 
 export const AuthCreateUserMutation = gql`
   mutation ($name:String! $email:String! $authProvider:AuthProviderSignupData!) {
@@ -88,7 +89,7 @@ export const AuthCreateUserMutation = gql`
       id
     }
   }
-`
+`;
 
 export const CreateMovieMutation = gql`
   mutation ($name:String!, $description:String!) {
@@ -97,4 +98,4 @@ export const CreateMovieMutation = gql`
       name
     }
   }
-`
+`;

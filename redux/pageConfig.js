@@ -9,7 +9,7 @@ const mapDispatchToProps = (dispatch) => {
     login: bindActionCreators(login, dispatch),
     logout: bindActionCreators(logout, dispatch),
     selectMovie: bindActionCreators(selectMovie, dispatch)
-  }
+  };
 };
 
 export default {

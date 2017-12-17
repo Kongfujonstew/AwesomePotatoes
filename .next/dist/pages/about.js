@@ -28,8 +28,6 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactDom = require('react-dom');
-
 var _nextReduxWrapper = require('next-redux-wrapper');
 
 var _nextReduxWrapper2 = _interopRequireDefault(_nextReduxWrapper);
@@ -66,9 +64,7 @@ var AboutPage = function (_React$Component) {
     key: 'getInitialProps',
     value: function getInitialProps(_ref) {
       var store = _ref.store,
-          isServer = _ref.isServer,
-          pathname = _ref.pathname,
-          query = _ref.query;
+          isServer = _ref.isServer;
 
       if (isServer) {
         return {};
@@ -80,7 +76,5 @@ var AboutPage = function (_React$Component) {
 
   return AboutPage;
 }(_react2.default.Component);
-
-;
 
 exports.default = (0, _nextReduxWrapper2.default)(_pageConfig2.default)(AboutPage);

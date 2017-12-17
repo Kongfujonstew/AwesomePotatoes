@@ -1,6 +1,7 @@
 import express from 'express';
 import next from 'next';
 import morgan from 'morgan';
+let process;
 
 require('dotenv').config();
 

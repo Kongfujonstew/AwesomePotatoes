@@ -12,10 +12,6 @@ var _createClass2 = require('babel-runtime/helpers/createClass');
 
 var _createClass3 = _interopRequireDefault(_createClass2);
 
-var _auth0Js = require('auth0-js');
-
-var _auth0Js2 = _interopRequireDefault(_auth0Js);
-
 var _auth0Lock = require('auth0-lock');
 
 var _auth0Lock2 = _interopRequireDefault(_auth0Lock);
@@ -23,6 +19,10 @@ var _auth0Lock2 = _interopRequireDefault(_auth0Lock);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var clientID = process.env.AUTH0_CLIENT_ID || AUTH0_CLIENT_ID;
+/*global process:true*/
+/*global AUTH0_CLIENT_ID:true*/
+/*global AUTH0_DOMAIN:true*/
+
 var domain = process.env.AUTH0_DOMAIN || AUTH0_DOMAIN;
 
 var Auth = function () {
@@ -77,5 +77,3 @@ var Auth = function () {
 }();
 
 exports.default = Auth;
-
-;

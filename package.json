@@ -8,6 +8,7 @@
     "build": "next build",
     "start": "next start -p $PORT",
     "test": "jest",
+    "lint": "eslint **/*.js",
     "heroku-postbuild": "npm run build"
   },
   "keywords": [

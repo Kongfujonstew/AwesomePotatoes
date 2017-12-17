@@ -39,6 +39,8 @@ var _templateObject = (0, _taggedTemplateLiteral3.default)(['\n  query ($email:S
     _templateObject6 = (0, _taggedTemplateLiteral3.default)(['\n  mutation ($name:String! $email:String! $authProvider:AuthProviderSignupData!) {\n   createUser (name:$name email: $email authProvider:$authProvider) {\n      id\n    }\n  }\n'], ['\n  mutation ($name:String! $email:String! $authProvider:AuthProviderSignupData!) {\n   createUser (name:$name email: $email authProvider:$authProvider) {\n      id\n    }\n  }\n']),
     _templateObject7 = (0, _taggedTemplateLiteral3.default)(['\n  mutation ($name:String!, $description:String!) {\n    createMovie (name:$name, description:$description) {\n      id\n      name\n    }\n  }\n'], ['\n  mutation ($name:String!, $description:String!) {\n    createMovie (name:$name, description:$description) {\n      id\n      name\n    }\n  }\n']);
 
+/*global process:true*/
+
 global.fetch = _nodeFetch2.default;
 
 var GRAPHCOOL_URI = process.env.GRAPHCOOL_URI || GRAPHCOOL_URI;
